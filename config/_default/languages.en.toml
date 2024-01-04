@@ -4,12 +4,12 @@ languageDirection = "ltr"
 weight = 1
 
 title = "Home"
-#copyright = "© 2024 Vaibhav Bhatia"
+# copyright = "© 2024 Vaibhav Bhatia"
 
 [params]
   dateFormat = "2 January 2006"
 
-  mainSections = ["section1", "section2"]
+  # mainSections = ["section1", "section2"]
   description = "My personal website to capture my learnings."
 
 [author]
@@ -58,5 +58,5 @@ title = "Home"
   #   { twitch = "https://twitch.tv/username" },
   #   { whatsapp = "https://wa.me/phone-number" },
   #   { x-twitter = "https://twitter.com/username" },
-     { youtube = "https://www.youtube.com/channel/UCXYTLXldVHT90wYP7hrCGBg" },
+     { youtube = "https://www.youtube.com/@vaibhav_bhatia" },
    ]

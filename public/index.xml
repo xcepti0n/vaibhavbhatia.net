@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Home</title>
+    <link>/</link>
+    <description>Recent content on Home</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>© 2024 Vaibhav Bhatia</copyright>
+    <lastBuildDate>Tue, 02 Jan 2024 23:04:02 -0800</lastBuildDate>
+    <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>About</title>
+      <link>/about/</link>
+      <pubDate>Tue, 02 Jan 2024 23:04:02 -0800</pubDate>
+      <guid>/about/</guid>
+      <description>I am Software Development Engineer for around 5 years.</description>
+    </item>
+    <item>
+      <title>Making website pretty</title>
+      <link>/posts/this-website-setup/user-interface/</link>
+      <pubDate>Tue, 02 Jan 2024 23:03:11 -0800</pubDate>
+      <guid>/posts/this-website-setup/user-interface/</guid>
+      <description>This article will explain how to use hugo to create your own website with awesome templates.</description>
+    </item>
+  </channel>
+</rss>
