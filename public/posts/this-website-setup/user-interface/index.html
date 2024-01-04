@@ -16,8 +16,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="theme-color" content="rgb(255,255,255)" />
   
-  <title>Making website pretty &middot; Home</title>
-    <meta name="title" content="Making website pretty &middot; Home" />
+  <title>Make website using Hugo &middot; Home</title>
+    <meta name="title" content="Make website using Hugo &middot; Home" />
   
   
   
@@ -74,7 +74,7 @@
   
   
   
-  <link rel="canonical" href="/posts/this-website-setup/user-interface/" />
+  <link rel="canonical" href="https://www.vaibhavbhatia.net/posts/this-website-setup/user-interface/" />
   
   
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
@@ -88,16 +88,16 @@
   
   
   
-  <meta property="og:title" content="Making website pretty" />
+  <meta property="og:title" content="Make website using Hugo" />
 <meta property="og:description" content="Creating " />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="/posts/this-website-setup/user-interface/" /><meta property="og:image" content="/posts/this-website-setup/user-interface/cover.png" /><meta property="article:section" content="posts" />
+<meta property="og:url" content="https://www.vaibhavbhatia.net/posts/this-website-setup/user-interface/" /><meta property="og:image" content="https://www.vaibhavbhatia.net/posts/this-website-setup/user-interface/cover.png" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2024-01-02T23:03:11-08:00" />
 <meta property="article:modified_time" content="2024-01-02T00:00:00+00:00" />
 
 
   <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:image" content="/posts/this-website-setup/user-interface/cover.png" /><meta name="twitter:title" content="Making website pretty"/>
+<meta name="twitter:image" content="https://www.vaibhavbhatia.net/posts/this-website-setup/user-interface/cover.png" /><meta name="twitter:title" content="Make website using Hugo"/>
 <meta name="twitter:description" content="Creating "/>
 
   
@@ -106,12 +106,12 @@
     "@context": "https://schema.org",
     "@type": "Article",
     "articleSection": "Blog",
-    "name": "Making website pretty",
-    "headline": "Making website pretty",
+    "name": "Make website using Hugo",
+    "headline": "Make website using Hugo",
     "description": "Creating ",
     "abstract": "This article will explain how to use hugo to create your own website with awesome templates.",
     "inLanguage": "en",
-    "url" : "\/posts\/this-website-setup\/user-interface\/",
+    "url" : "https:\/\/www.vaibhavbhatia.net\/posts\/this-website-setup\/user-interface\/",
     "author" : {
       "@type": "Person",
       "name": "Vaibhav Bhatia"
@@ -125,7 +125,7 @@
     "keywords": ["website","ui","hugo"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "60"
+    "wordCount": "812"
   }
   </script>
 
@@ -406,7 +406,7 @@
     <a
       class="hover:underline decoration-neutral-300 dark:underline-neutral-600"
       href="/posts/this-website-setup/"
-      >Creating a public website</a
+      >Create and host your own website using nginx, cloudflare and Hugo</a
     ><span class="px-1 text-primary-500">/</span>
   </li>
 
@@ -415,7 +415,7 @@
     <a
       class="hover:underline decoration-neutral-300 dark:underline-neutral-600"
       href="/posts/this-website-setup/user-interface/"
-      >Making website pretty</a
+      >Make website using Hugo</a
     ><span class="px-1 text-primary-500">/</span>
   </li>
 
@@ -424,7 +424,7 @@
 
       
       <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
-        Making website pretty
+        Make website using Hugo
       </h1>
       <div class="mt-8 mb-12 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
         
@@ -459,7 +459,7 @@
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2024-01-02 23:03:11 -0800 PST">2 January 2024</time><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">1 min</span>
+      <time datetime="2024-01-02 23:03:11 -0800 PST">2 January 2024</time><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">4 mins</span>
     
 
     
@@ -529,9 +529,17 @@
   <div class="-ms-5 border-s border-dotted border-neutral-300 py-2 ps-5 dark:border-neutral-600">
     <nav id="TableOfContents">
   <ul>
-    <li>
+    <li><a href="#installing-hugo-and-initial-setup">Installing Hugo and initial setup</a>
       <ul>
-        <li><a href="#installing-hugo-and-initial-setup">Installing Hugo and initial setup</a></li>
+        <li><a href="#resources-and-steps-to-setup-your-website">Resources and steps to setup your website.</a></li>
+        <li><a href="#syncing-the-updated-pages-to-your-server">Syncing the updated pages to your server.</a>
+          <ul>
+            <li><a href="#what-i-did-for-syncing-website-to-server">What I did for syncing website to server</a></li>
+            <li><a href="#other-options-on-upload-website-to-server-other-than-git">Other options on upload website to server (other than git)</a></li>
+            <li><a href="#automating-the-sync">Automating the sync</a></li>
+          </ul>
+        </li>
+        <li><a href="#learnings-and-resources">Learnings and resources</a></li>
       </ul>
     </li>
   </ul>
@@ -544,10 +552,104 @@
       
       <div class="min-w-0 min-h-0 max-w-prose grow">
         <p>This article will explain how to use hugo to create your own website with awesome templates.</p>
-<h3 id="installing-hugo-and-initial-setup" class="relative group">Installing Hugo and initial setup <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#installing-hugo-and-initial-setup" aria-label="Anchor">#</a></span></h3><p>Now that you have your website up and running, lets make the website more presentable.</p>
-<p><a href="https://gohugo.io/getting-started/quick-start/" target="_blank" rel="noreferrer">https://gohugo.io/getting-started/quick-start/</a></p>
-<p>Theme: <a href="https://jpanther.github.io/congo" target="_blank" rel="noreferrer">https://jpanther.github.io/congo</a></p>
-<p>I have used Hugo with congo theme for my website. Check out link about to learn about it in more detail.</p>
+<h2 id="installing-hugo-and-initial-setup" class="relative group">Installing Hugo and initial setup <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#installing-hugo-and-initial-setup" aria-label="Anchor">#</a></span></h2><p>Now that you have your wesbite server up and running with a webpage, lets make the website awesome.</p>
+<h3 id="resources-and-steps-to-setup-your-website" class="relative group">Resources and steps to setup your website. <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#resources-and-steps-to-setup-your-website" aria-label="Anchor">#</a></span></h3><ul>
+<li>Install <a href="https://gohugo.io/installation/" target="_blank" rel="noreferrer">Hugo</a></li>
+<li>Install <a href="https://git-scm.com/book/en/v2/Getting-Started-Installing-Git" target="_blank" rel="noreferrer">Git</a> (if you don&rsquo;t have it installed.)</li>
+<li>Install <a href="https://learn.microsoft.com/en-us/powershell/scripting/install/installing-powershell-on-windows" target="_blank" rel="noreferrer">Powershell</a> if you are a windows user.
+<ul>
+<li>NOTE: PowerShell and Windows PowerShell are different applications.</li>
+</ul>
+</li>
+<li>Run command <code>hugo version</code> on Powershell terminal to confirm that hugo is working.</li>
+</ul>
+<p><strong>Alternative 1: Using this website git repository as base</strong></p>
+<p>I will only recommend this if you are new all commands and stuff. If you know a bit about it checkout alterative 2 below.</p>
+<ul>
+<li>Fork my repo from git: <a href="https://github.com/xcepti0n/vaibhavbhatia.net/" target="_blank" rel="noreferrer">https://github.com/xcepti0n/vaibhavbhatia.net/</a></li>
+<li>Choose name of your repo to your domain or something of your liking.</li>
+<li>Use <code>git clone &lt;your-repository-link.git&gt;</code> to clone your repository locally.</li>
+<li>Change your current directory <code>cd &lt;your-repo-name&gt;</code></li>
+<li>Run <code>git pull --recurse-submodules</code> to pull congo submodule.</li>
+<li>Run <code>hugo server</code> to start the server.</li>
+<li>Checkout website on <code>localhost:1313</code>. (Also logged in output of above command).</li>
+<li>Make changes locally and it should be reflected in the webpage instantly.</li>
+<li>Checkout <a href="https://jpanther.github.io/congo/docs/getting-started/" target="_blank" rel="noreferrer">congo guide</a> to know what each configuration does and how things are managed.</li>
+<li>All config files are in <em>config/_defaults</em> folder for you to tinker with.</li>
+</ul>
+<p><strong>Alternative 2: Using Hugo guide</strong></p>
+<ul>
+<li>Follow the quick start guide to setup initial package: <a href="https://gohugo.io/getting-started/quick-start/" target="_blank" rel="noreferrer">https://gohugo.io/getting-started/quick-start/</a></li>
+<li>To use <code>congo</code> theme, follow <a href="https://jpanther.github.io/congo/docs/installation/" target="_blank" rel="noreferrer">https://jpanther.github.io/congo/docs/installation/</a>, it has easy setup guide, including what needs to be done on Hugo.</li>
+</ul>
+<p>For other themes checkout <a href="https://themes.gohugo.io/" target="_blank" rel="noreferrer">Hugo Themes</a></p>
+<h3 id="syncing-the-updated-pages-to-your-server" class="relative group">Syncing the updated pages to your server. <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#syncing-the-updated-pages-to-your-server" aria-label="Anchor">#</a></span></h3><p>There are multiple way to do it. Lets see what I did, and then discuss the alternatives.</p>
+<h4 id="what-i-did-for-syncing-website-to-server" class="relative group">What I did for syncing website to server <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#what-i-did-for-syncing-website-to-server" aria-label="Anchor">#</a></span></h4><ol>
+<li>Ran command <code>hugo</code> locally to generate static website in dev environment. (i.e. my machine).</li>
+<li>Used git to commit the public folder as well which contains the static generated website.</li>
+<li>Installed git on server using <code>sudo apt-get install git-all</code>. For other OS checkout <a href="https://github.com/git-guides/install-git" target="_blank" rel="noreferrer">https://github.com/git-guides/install-git</a></li>
+<li>Ran command <code>git clone &lt;my-repo-link&gt;.git</code> to clone the repo on the server.</li>
+<li>Copy the contents on <code>public</code> folder to the path where nginx is referring from, using <code>cp -r ./public/ /var/www/&lt;your folder&gt;/</code></li>
+<li>Restart nginx - <code>systemctl restart nginx</code>.</li>
+<li>Checkout your webpage and see the updated website.</li>
+</ol>
+<p><strong>FAQ</strong></p>
+<p><em>Q: Why did you not installed hugo locally on server and generate website on server itself?</em></p>
+<ul>
+<li>I did this first but, it was causing issues to generate HTML files, due to some layout folder issue. I choose to do the above, to avoid spending time on debugging (I am lazy sometimes).</li>
+</ul>
+<h4 id="other-options-on-upload-website-to-server-other-than-git" class="relative group">Other options on upload website to server (other than git) <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#other-options-on-upload-website-to-server-other-than-git" aria-label="Anchor">#</a></span></h4><p>These are other options to upload your website to your server but are not recommended as are not scalable.</p>
+<ol>
+<li>Create basic python server locally and host your folder which has the website. Use curl or Wget to download the folder on the server if you have local server.</li>
+<li>Use flash drive to transfer website..</li>
+<li>Use google drive and open the folder to public, and use its link to download on your server.</li>
+</ol>
+<p><strong>Recommended if you are using static website host providers like <em>AWS S3</em></strong></p>
+<ol>
+<li>If you are using <em>AWS S3</em> to host your static website, viola. Just upload your website and done.</li>
+</ol>
+<h4 id="automating-the-sync" class="relative group">Automating the sync <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#automating-the-sync" aria-label="Anchor">#</a></span></h4><p>I have not automated it yet, as I haven&rsquo;t got the time to do it but if you want to do it, here are the steps.</p>
+<ol>
+<li>Write a basic bash script to do: (psuedo code below)</li>
+</ol>
+<pre tabindex="0"><code>    `git fetch`: Fetches the new commit if there is one.
+
+    // Check if there are new commits to be pulled.
+    // Can be done by substring matching on `git fetch` output,
+    // or explore git to see if there are other alterative
+    If new commit: 
+        // Pull the commit
+        run `git pull --rebase`
+        // Copy the static website tonginx  server preferred location.
+        cp -r ./public/ /var/www/&lt;yourfolder&gt;/
+        // Restart server
+        systemctl restart nginx
+    Else:
+        Do nothing
+</code></pre><ol start="2">
+<li>Make the cron job from this bash script to run once a day or as per your need and you are good to go.</li>
+</ol>
+<p>I have not setup the script yet, as I prefer to do it manually as I am already running commands to push the changes to git. (I agree I am lazy&hellip;)</p>
+<h3 id="learnings-and-resources" class="relative group">Learnings and resources <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#learnings-and-resources" aria-label="Anchor">#</a></span></h3><ol>
+<li>
+<p>Powershell and Windows Powershell are different (Whaattt? - exactly my reaction)
+Install here - <a href="https://learn.microsoft.com/en-us/powershell/scripting/install/installing-powershell-on-windows?view=powershell-7.4" target="_blank" rel="noreferrer">https://learn.microsoft.com/en-us/powershell/scripting/install/installing-powershell-on-windows?view=powershell-7.4</a>
+Take - Powershell is way better than windows powershell.</p>
+</li>
+<li>
+<p>Installing hugo on windows: <a href="https://gohugo.io/installation/windows/" target="_blank" rel="noreferrer">https://gohugo.io/installation/windows/</a>
+I used chocolatey: <a href="https://gohugo.io/installation/windows/#chocolatey" target="_blank" rel="noreferrer">https://gohugo.io/installation/windows/#chocolatey</a></p>
+</li>
+<li>
+<p>Markdown is used throughout Hugo to create your website so here is the <a href="https://www.markdownguide.org/basic-syntax/" target="_blank" rel="noreferrer">basic syntax</a> on how to use it.</p>
+</li>
+<li>
+<p>Hugo generated static website does not work properly (HTML was not being generated) if you just open the file without the server.
+Solution: <a href="https://discourse.gohugo.io/t/site-looks-fine-on-localhost-and-github-pages-but-not-when-rendering-to-public/35825/2" target="_blank" rel="noreferrer">https://discourse.gohugo.io/t/site-looks-fine-on-localhost-and-github-pages-but-not-when-rendering-to-public/35825/2</a></p>
+<p>or just commit your public folder as well, just like I did.</p>
+</li>
+</ol>
+<p><em>I hope it helped, thanks for reading!</em></p>
 
       </div>
     </section>
@@ -622,12 +724,60 @@
 
       
   
+    
+    
+    
+      
+      
+    
+    <div class="pt-8">
+      <hr class="border-dotted border-neutral-300 dark:border-neutral-600" />
+      <div class="flex justify-between pt-3">
+        <span>
+          
+            <a class="group flex" href="/posts/this-website-setup/hosting/">
+              <span
+                class="me-2 text-neutral-700 transition-transform group-hover:-translate-x-[2px] group-hover:text-primary-600 dark:text-neutral dark:group-hover:text-primary-400"
+                ><span class="ltr:inline rtl:hidden">&larr;</span
+                ><span class="ltr:hidden rtl:inline">&rarr;</span></span
+              >
+              <span class="flex flex-col">
+                <span
+                  class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
+                  >Host your website using Cloudflare tunnel</span
+                >
+                <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
+                  
+                    <time datetime="2024-01-02 23:04:02 -0800 PST">2 January 2024</time>
+                  
+                </span>
+              </span>
+            </a>
+          
+        </span>
+        <span>
+          
+        </span>
+      </div>
+    </div>
+  
 
 
       
     </footer>
   </article>
 
+        
+          <div class="pointer-events-none absolute bottom-0 end-0 top-[100vh] w-12">
+            <a
+              href="#the-top"
+              class="pointer-events-auto sticky top-[calc(100vh-5.5rem)] flex h-12 w-12 items-center justify-center rounded-full bg-neutral/50 text-xl text-neutral-700 backdrop-blur hover:text-primary-600 dark:bg-neutral-800/50 dark:text-neutral dark:hover:text-primary-400"
+              aria-label="Scroll to top"
+              title="Scroll to top"
+            >
+              &uarr;
+            </a>
+          </div>
         
       </main><footer class="py-10 print:hidden">
   
@@ -637,7 +787,9 @@
       
       
         <p class="text-sm text-neutral-500 dark:text-neutral-400">
-            © 2024 Vaibhav Bhatia
+            &copy;
+            2024
+            Vaibhav Bhatia
         </p>
       
       
@@ -684,7 +836,7 @@
 <div
   id="search-wrapper"
   class="invisible fixed inset-0 z-50 flex h-screen w-screen cursor-default flex-col bg-neutral-500/50 p-4 backdrop-blur-sm dark:bg-neutral-900/50 sm:p-6 md:p-[10vh] lg:p-[12vh]"
-  data-url="/"
+  data-url="https://www.vaibhavbhatia.net/"
 >
   <div
     id="search-modal"

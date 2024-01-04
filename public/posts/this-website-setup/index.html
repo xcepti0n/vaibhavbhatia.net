@@ -16,8 +16,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="theme-color" content="rgb(255,255,255)" />
   
-  <title>Creating a public website &middot; Home</title>
-    <meta name="title" content="Creating a public website &middot; Home" />
+  <title>Create and host your own website using nginx, cloudflare and Hugo &middot; Home</title>
+    <meta name="title" content="Create and host your own website using nginx, cloudflare and Hugo &middot; Home" />
   
   
   
@@ -76,7 +76,7 @@
   
   
   
-  <link rel="canonical" href="/posts/this-website-setup/" />
+  <link rel="canonical" href="https://www.vaibhavbhatia.net/posts/this-website-setup/" />
   <link rel="alternate" type="application/rss+xml" href="/posts/this-website-setup/index.xml" title="Home" />
   
   
@@ -91,13 +91,14 @@
   
   
   
-  <meta property="og:title" content="Creating a public website" />
+  <meta property="og:title" content="Create and host your own website using nginx, cloudflare and Hugo" />
 <meta property="og:description" content="My personal website to capture my learnings." />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="/posts/this-website-setup/" />
+<meta property="og:url" content="https://www.vaibhavbhatia.net/posts/this-website-setup/" /><meta property="og:image" content="https://www.vaibhavbhatia.net/posts/this-website-setup/feature.jpg" />
 
 
-  <meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Creating a public website"/>
+  <meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://www.vaibhavbhatia.net/posts/this-website-setup/feature.jpg" /><meta name="twitter:title" content="Create and host your own website using nginx, cloudflare and Hugo"/>
 <meta name="twitter:description" content="My personal website to capture my learnings."/>
 
   
@@ -377,7 +378,7 @@
     <a
       class="hover:underline decoration-neutral-300 dark:underline-neutral-600"
       href="/posts/this-website-setup/"
-      >Creating a public website</a
+      >Create and host your own website using nginx, cloudflare and Hugo</a
     ><span class="px-1 text-primary-500">/</span>
   </li>
 
@@ -385,20 +386,23 @@
 
 
     
-    <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">Creating a public website</h1>
+    <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">Create and host your own website using nginx, cloudflare and Hugo</h1>
   </header>
   <section
     class="mt-0 prose flex max-w-full flex-col dark:prose-invert lg:flex-row"
   >
     
     <div class="min-w-0 min-h-0 max-w-prose grow">
-      <p>Here is the process I followed to setup my first website (this exact one!).</p>
-<p>I will be posting about each step in detail.</p>
-<h4 id="i-will-assume-that-you-have" class="relative group">I will assume that you have: <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#i-will-assume-that-you-have" aria-label="Anchor">#</a></span></h4><ul>
-<li>A domain (eg - &lt;your name&gt;.com), if you want to host publically.</li>
-<li>Basic understanding about how a website works, like what is a webpage, server and domain provider etc.</li>
+      <p>Here is a step by step guide to help you host your own first website.</p>
+<h4 id="to-host-your-own-website-you-will-need" class="relative group">To host your own website you will need <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#to-host-your-own-website-you-will-need" aria-label="Anchor">#</a></span></h4><ul>
+<li>A <em>domain</em> (eg - &lt;your name&gt;.com), if you want to host publically.
+If you don&rsquo;t have it already you can get one by following this <a href="https://developers.cloudflare.com/registrar/get-started/register-domain/" target="_blank" rel="noreferrer">guide</a>. Cloudflare is one of Domain pprovider, you can choose your favorite domain provider.</li>
+<li>A server - It can be a docker container on your own Laptop, a mini PC running proxmox or a server running on linode or any other server providers..
+You can use Debian, Ubuntu or any other OS of your choice. (Articles below considers you have Debian 12)</li>
 </ul>
-<p>It will be helpful in understanding what we will be doing.</p>
+<p>You will learn as you go through the articles, as I did when I followed the process of setting up this website.</p>
+<p><strong>It is recommended to follow this order if you have no initial setup</strong></p>
+<p><em>Setup HTTPS server using NGINX</em> -&gt; <em>Host your website using Cloudflare tunnel</em> -&gt; <em>Make website using Hugo</em></p>
 
     </div>
   </section>
@@ -410,16 +414,16 @@
     <div class="flex-none pe-4 sm:pe-6 ">
       <a
         href="
-          /posts/this-website-setup/user-interface/
+          /posts/this-website-setup/server-and-certs/
         "
-        aria-label="Making website pretty"
+        aria-label="Setup HTTPS server using NGINX"
       >
         <img
           alt=""
           
-            class="w-24 rounded-md sm:w-40" srcset="/posts/this-website-setup/user-interface/thumb_hu5c5ccc0b6930b8a852e7035fe144fbbf_4737_160x120_fill_box_smart1_3.png
-            160w,/posts/this-website-setup/user-interface/thumb_hu5c5ccc0b6930b8a852e7035fe144fbbf_4737_320x240_fill_box_smart1_3.png 2x"
-            src="/posts/this-website-setup/user-interface/thumb_hu5c5ccc0b6930b8a852e7035fe144fbbf_4737_160x120_fill_box_smart1_3.png"
+            class="w-24 rounded-md sm:w-40" srcset="/posts/this-website-setup/server-and-certs/thumb_hub6a0a61d399fe0fb4ddf1617323d2937_1727_160x120_fill_box_smart1_3.png
+            160w,/posts/this-website-setup/server-and-certs/thumb_hub6a0a61d399fe0fb4ddf1617323d2937_1727_320x240_fill_box_smart1_3.png 2x"
+            src="/posts/this-website-setup/server-and-certs/thumb_hub6a0a61d399fe0fb4ddf1617323d2937_1727_160x120_fill_box_smart1_3.png"
             width="160"
             height="120"
           
@@ -434,8 +438,8 @@
       
         <a
           class="text-neutral-800 decoration-primary-500 hover:underline hover:underline-offset-2 dark:text-neutral"
-          href="/posts/this-website-setup/user-interface/"
-          >Making website pretty</a
+          href="/posts/this-website-setup/server-and-certs/"
+          >Setup HTTPS server using NGINX</a
         >
       
       
@@ -471,7 +475,179 @@
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2024-01-02 23:03:11 -0800 PST">2 January 2024</time><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">1 min</span>
+      <time datetime="2024-01-02 23:04:05 -0800 PST">2 January 2024</time><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">3 mins</span>
+    
+
+    
+    
+  </div>
+
+  
+  
+
+
+    </div>
+    
+      <div class="prose py-1 dark:prose-invert">
+        This article explains how to host a plain website using nginx server on https locally on Debian 12.
+      </div>
+    
+  </div>
+</article>
+
+        
+          <article class="mt-6 flex max-w-prose flex-row">
+    <div class="flex-none pe-4 sm:pe-6 ">
+      <a
+        href="
+          /posts/this-website-setup/hosting/
+        "
+        aria-label="Host your website using Cloudflare tunnel"
+      >
+        <img
+          alt=""
+          
+            class="w-24 rounded-md sm:w-40" srcset="/posts/this-website-setup/hosting/thumb_huef7cb942eefbc24d676fdf6d3e589afc_2064_160x120_fill_box_smart1_3.png
+            160w,/posts/this-website-setup/hosting/thumb_huef7cb942eefbc24d676fdf6d3e589afc_2064_320x240_fill_box_smart1_3.png 2x"
+            src="/posts/this-website-setup/hosting/thumb_huef7cb942eefbc24d676fdf6d3e589afc_2064_160x120_fill_box_smart1_3.png"
+            width="160"
+            height="120"
+          
+          
+            loading="lazy"
+          
+        />
+      </a>
+    </div>
+  <div>
+    <h3 class="flex items-center text-xl font-semibold">
+      
+        <a
+          class="text-neutral-800 decoration-primary-500 hover:underline hover:underline-offset-2 dark:text-neutral"
+          href="/posts/this-website-setup/hosting/"
+          >Host your website using Cloudflare tunnel</a
+        >
+      
+      
+      
+    </h3>
+    <div class="text-sm text-neutral-500 dark:text-neutral-400">
+      
+
+
+
+
+
+
+
+  
+
+  
+  
+    
+  
+
+  
+
+  
+
+  
+    
+  
+
+  
+
+
+  <div class="flex flex-row flex-wrap items-center">
+    
+    
+      <time datetime="2024-01-02 23:04:02 -0800 PST">2 January 2024</time><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">2 mins</span>
+    
+
+    
+    
+  </div>
+
+  
+  
+
+
+    </div>
+    
+      <div class="prose py-1 dark:prose-invert">
+        This article tells about how to host a website publically using cloudflare tunnel, that is running on localhost.
+      </div>
+    
+  </div>
+</article>
+
+        
+          <article class="mt-6 flex max-w-prose flex-row">
+    <div class="flex-none pe-4 sm:pe-6 ">
+      <a
+        href="
+          /posts/this-website-setup/user-interface/
+        "
+        aria-label="Make website using Hugo"
+      >
+        <img
+          alt=""
+          
+            class="w-24 rounded-md sm:w-40" srcset="/posts/this-website-setup/user-interface/thumb_hu5c5ccc0b6930b8a852e7035fe144fbbf_4737_160x120_fill_box_smart1_3.png
+            160w,/posts/this-website-setup/user-interface/thumb_hu5c5ccc0b6930b8a852e7035fe144fbbf_4737_320x240_fill_box_smart1_3.png 2x"
+            src="/posts/this-website-setup/user-interface/thumb_hu5c5ccc0b6930b8a852e7035fe144fbbf_4737_160x120_fill_box_smart1_3.png"
+            width="160"
+            height="120"
+          
+          
+            loading="lazy"
+          
+        />
+      </a>
+    </div>
+  <div>
+    <h3 class="flex items-center text-xl font-semibold">
+      
+        <a
+          class="text-neutral-800 decoration-primary-500 hover:underline hover:underline-offset-2 dark:text-neutral"
+          href="/posts/this-website-setup/user-interface/"
+          >Make website using Hugo</a
+        >
+      
+      
+      
+    </h3>
+    <div class="text-sm text-neutral-500 dark:text-neutral-400">
+      
+
+
+
+
+
+
+
+  
+
+  
+  
+    
+  
+
+  
+
+  
+
+  
+    
+  
+
+  
+
+
+  <div class="flex flex-row flex-wrap items-center">
+    
+    
+      <time datetime="2024-01-02 23:03:11 -0800 PST">2 January 2024</time><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">4 mins</span>
     
 
     
@@ -507,7 +683,9 @@
       
       
         <p class="text-sm text-neutral-500 dark:text-neutral-400">
-            © 2024 Vaibhav Bhatia
+            &copy;
+            2024
+            Vaibhav Bhatia
         </p>
       
       
@@ -554,7 +732,7 @@
 <div
   id="search-wrapper"
   class="invisible fixed inset-0 z-50 flex h-screen w-screen cursor-default flex-col bg-neutral-500/50 p-4 backdrop-blur-sm dark:bg-neutral-900/50 sm:p-6 md:p-[10vh] lg:p-[12vh]"
-  data-url="/"
+  data-url="https://www.vaibhavbhatia.net/"
 >
   <div
     id="search-modal"

@@ -1,19 +1,32 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Creating a public website on Home</title>
-    <link>/posts/this-website-setup/</link>
-    <description>Recent content in Creating a public website on Home</description>
+    <title>Create and host your own website using nginx, cloudflare and Hugo on Home</title>
+    <link>https://www.vaibhavbhatia.net/posts/this-website-setup/</link>
+    <description>Recent content in Create and host your own website using nginx, cloudflare and Hugo on Home</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <copyright>© 2024 Vaibhav Bhatia</copyright>
     <lastBuildDate>Tue, 02 Jan 2024 23:04:02 -0800</lastBuildDate>
-    <atom:link href="/posts/this-website-setup/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://www.vaibhavbhatia.net/posts/this-website-setup/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Making website pretty</title>
-      <link>/posts/this-website-setup/user-interface/</link>
+      <title>Setup HTTPS server using NGINX</title>
+      <link>https://www.vaibhavbhatia.net/posts/this-website-setup/server-and-certs/</link>
+      <pubDate>Tue, 02 Jan 2024 23:04:05 -0800</pubDate>
+      <guid>https://www.vaibhavbhatia.net/posts/this-website-setup/server-and-certs/</guid>
+      <description>This article explains how to host a plain website using nginx server on https locally on Debian 12.</description>
+    </item>
+    <item>
+      <title>Host your website using Cloudflare tunnel</title>
+      <link>https://www.vaibhavbhatia.net/posts/this-website-setup/hosting/</link>
+      <pubDate>Tue, 02 Jan 2024 23:04:02 -0800</pubDate>
+      <guid>https://www.vaibhavbhatia.net/posts/this-website-setup/hosting/</guid>
+      <description>This article tells about how to host a website publically using cloudflare tunnel, that is running on localhost.</description>
+    </item>
+    <item>
+      <title>Make website using Hugo</title>
+      <link>https://www.vaibhavbhatia.net/posts/this-website-setup/user-interface/</link>
       <pubDate>Tue, 02 Jan 2024 23:03:11 -0800</pubDate>
-      <guid>/posts/this-website-setup/user-interface/</guid>
+      <guid>https://www.vaibhavbhatia.net/posts/this-website-setup/user-interface/</guid>
       <description>This article will explain how to use hugo to create your own website with awesome templates.</description>
     </item>
   </channel>
