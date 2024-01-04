@@ -1,5 +1,5 @@
 +++
-title = 'Making website using Hugo'
+title = 'Make website using Hugo'
 date = 2024-01-02T23:03:11-08:00
 lastmod = 2024-01-02
 description = 'Creating '

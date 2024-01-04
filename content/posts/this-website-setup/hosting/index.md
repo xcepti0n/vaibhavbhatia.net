@@ -1,8 +1,8 @@
 +++
-title = 'Hosting'
+title = 'Host your website using Cloudflare tunnel'
 date = 2024-01-02T23:04:02-08:00
 lastmod = 2024-01-02
-description = 'We will be understanding how to host your website via cloudflare tunnel.'
+description = 'This articcle with explain step by step on how to host your website via cloudflare tunnel.'
 tags = ["hosting", "https", "cloudflare", "cloudflare tunnel", "cloudflared"]
 showDateUpdated = true
 draft = false
@@ -43,21 +43,18 @@ Steps to create a cloudflared tunnel:
 
  > Now you have tunnel running but it does not know which ip or port to forward the tunnel request to and when to forward.
 
- 11. On dashboard now you will be on *Public Hostnames* section, which means the traffic routed from publuc domain to your tunnel.
- 12. Under **Add public Domain for *<Tunnel Name>* you will see below sections. (Fill unless optional)
-    12.1. Subdomain - Fill `www` or subdomain of your website for which which you want the traffic to be routed.
-    12.2. Domain - It is a drop down menu, choose your domain.
-    12.3. Path - Leave it blank
-    12.4 Type - Choose https, as we have our hosted our server locally on https.
-    12.5 URL - You can write *localhost:<port>* if your cloudflare is running on the same server. Or write the local IP address of your server Eg. 192.168.0.121. 
-        Port is not a must
+12. On dashboard now you will be on *Public Hostnames* section, which means the traffic routed from publuc domain to your tunnel.
+13. Under **Add public Domain for *<Tunnel Name>* you will see below sections. (Fill unless optional)
+    1. Subdomain - Fill `www` or subdomain of your website for which which you want the traffic to be routed.
+    2. Domain - Choose your domain from the drop down menu.
+    3. Path (optional) - you can leave it blank.
+    4. Type - Choose https, as we have hosted our server locally on https.
+    5. URL - You can write *localhost:<port>* if your cloudflare is running on the same server. Or write the local IP address of your server Eg. 192.168.0.121 (you can skip if it is on default port like 443 for https.)
+        
 
 
-Creating tunnel.
 
-Installing cloudflared.
 
-Updating on cloudflare dashboard with ip and port of local website.
 
 
 

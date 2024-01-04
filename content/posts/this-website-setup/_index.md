@@ -1,15 +1,19 @@
 +++
-title = 'Creating a public website'
+title = 'Create and host your own website using nginx, cloudflare and Hugo'
 date = 2024-01-02T23:04:02-08:00
 groupByYear = false
 +++
 
-Here is the process I followed to setup my first website (this exact one!).
+Here is a step by step guide to help you host your own first website.
 
-#### It will assume that you have:
--  A domain (eg - \<your name\>.com), if you want to host publically.
--  Basic understanding about how a website works, like what is a webpage, server and domain provider..
+#### To host your own website you will need
+-  A *domain* (eg - \<your name\>.com), if you want to host publically.
+    If you don't have it already you can get one by following this [guide](https://developers.cloudflare.com/registrar/get-started/register-domain/). Cloudflare is one of Domain pprovider, you can choose your favorite domain provider.
+- A server - It can be a docker container on your own Laptop, a mini PC running proxmox or a server running on linode or any other server providers..
+    You can use Debian, Ubuntu or any other OS of your choice. (Articles below considers you have Debian 12)
 
-**This is the order if you have no setup:**
+You will learn as you go through the articles, as I did when I followed the process of setting up this website.
 
-*Server and Certs* -> *Hosting* -> *Making website using Hugo*
+**It is recommended to follow this order if you have no initial setup**
+
+*Setup HTTPS server using NGINX* -> *Host your website using Cloudflare tunnel* -> *Make website using Hugo*
