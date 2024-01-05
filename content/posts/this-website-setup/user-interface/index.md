@@ -3,17 +3,16 @@ title = 'Make website using Hugo'
 date = 2024-01-02T23:03:11-08:00
 lastmod = 2024-01-02
 description = 'Creating '
-tags = ["website", "ui", "hugo"]
+tags = ["website", "ui", "hugo", "themes"]
 showDateUpdated = true
 draft = false
 +++
 
-This article will explain how to use hugo to create your own website with awesome templates.
+This article will explain, how to use *hugo* to create your own website with awesome themes.
 
 ## Installing Hugo and initial setup
 
-Now that you have your wesbite server up and running with a webpage, lets make the website awesome.
-
+Now that you have your wesbite server up and running with a webpage, lets make the website more awesome.
 
 ### Resources and steps to setup your website.
 
@@ -23,9 +22,9 @@ Now that you have your wesbite server up and running with a webpage, lets make t
     - NOTE: PowerShell and Windows PowerShell are different applications.
 - Run command `hugo version` on Powershell terminal to confirm that hugo is working.
 
-**Alternative 1: Using this website git repository as base**
+**Approach 1: Using this website git repository as base**
 
-I will only recommend this if you are new all commands and stuff. If you know a bit about it checkout alterative 2 below.
+I would recommend this if you are new to all commands and stuff. But If you know a bit around computers and creating websites, I would suggest checking out approach 2 below.
 - Fork my repo from git: https://github.com/xcepti0n/vaibhavbhatia.net/
 - Choose name of your repo to your domain or something of your liking.
 - Use `git clone <your-repository-link.git>` to clone your repository locally.
@@ -33,11 +32,11 @@ I will only recommend this if you are new all commands and stuff. If you know a 
 - Run `git pull --recurse-submodules` to pull congo submodule.
 - Run `hugo server` to start the server.
 - Checkout website on `localhost:1313`. (Also logged in output of above command).
-- Make changes locally and it should be reflected in the webpage instantly.
+- Make changes locally and it should be reflected in the webpage instantly! Isn't it awesome? though its pretty normal nowadays, but yeahh!
 - Checkout [congo guide](https://jpanther.github.io/congo/docs/getting-started/) to know what each configuration does and how things are managed.
 - All config files are in *config/_defaults* folder for you to tinker with.
 
-**Alternative 2: Using Hugo guide**
+**Approach 2: Using Hugo guide**
 - Follow the quick start guide to setup initial package: https://gohugo.io/getting-started/quick-start/
 - To use `congo` theme, follow https://jpanther.github.io/congo/docs/installation/, it has easy setup guide, including what needs to be done on Hugo.
 
@@ -45,7 +44,7 @@ For other themes checkout [Hugo Themes](https://themes.gohugo.io/)
 
 ### Syncing the updated pages to your server.
 
-There are multiple way to do it. Lets see what I did, and then discuss the alternatives.
+There are multiple way to do it. Lets see what I did, and then lets also discuss the alternatives.
 
 #### What I did for syncing website to server
 1. Ran command `hugo` locally to generate static website in dev environment. (i.e. my machine).
@@ -58,7 +57,7 @@ There are multiple way to do it. Lets see what I did, and then discuss the alter
 
 **FAQ**
 
-*Q: Why did you not installed hugo locally on server and generate website on server itself?*
+*Q: Why did you not installed hugo locally on server and generated static website on server itself?*
 - I did this first but, it was causing issues to generate HTML files, due to some layout folder issue. I choose to do the above, to avoid spending time on debugging (I am lazy sometimes).
 
 
