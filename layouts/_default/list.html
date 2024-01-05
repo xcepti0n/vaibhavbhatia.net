@@ -1,6 +1,6 @@
 {{ define "main" }}
   {{ $toc := and (.Params.showTableOfContents | default (.Site.Params.list.showTableOfContents | default false)) (in .TableOfContents "<ul") }}
-  <header>
+  <header style="max-width: 90ch;">
     {{ if .Params.showBreadcrumbs | default (.Site.Params.list.showBreadcrumbs | default false) }}
       {{ partial "breadcrumbs.html" . }}
     {{ end }}
@@ -20,7 +20,7 @@
         </div>
       </div>
     {{ end }}
-    <div class="min-w-0 min-h-0 max-w-prose grow">
+    <div class="min-w-0 min-h-0 grow" style="max-width: 80ch;">
       {{ .Content | emojify }}
     </div>
   </section>
