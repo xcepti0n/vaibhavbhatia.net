@@ -8,7 +8,7 @@ showDateUpdated = true
 draft = false
 +++
 
-This article tells about how to host a website publically using cloudflare tunnel, that is running on localhost.
+This article explains how to host a website publically using cloudflare tunnel, that is running on localhost.
 
 <!-- more -->
 ## Hosting on Cloudflare
@@ -27,7 +27,7 @@ Creating tunnel using dashboard (managed-remotely): https://developers.cloudflar
 > You should follow above guides as they are kept up to date by Cloudflare, mine can be old depending on when you checking it.
 
 
-Steps to create a cloudflared tunnel:
+#### Steps to create a cloudflared tunnel:
 
 1. Go to [Zero Trust](https://one.dash.cloudflare.com/)
 2. Select your account.
@@ -37,7 +37,7 @@ Steps to create a cloudflared tunnel:
 6. Click on **Save tunnel**.
 7. You will be now in **Install and run Connectors** section.
 8. Choose your Operating system.
-9. Run the command provided where your server is hosted.
+9. Copy the commands provided on dashboard and run it on your server.
 10. Now cloudflared should be running locally. (Confirm using systemctl status cloudflared)
 11. It should also show on the dashboard that you have a connector connected.
 
@@ -50,6 +50,10 @@ Steps to create a cloudflared tunnel:
     3. Path (optional) - you can leave it blank.
     4. Type - Choose https, as we have hosted our server locally on https.
     5. URL - You can write *localhost:<port>* if your cloudflare is running on the same server. Or write the local IP address of your server Eg. 192.168.0.121 (you can skip if it is on default port like 443 for https.)
+
+Checkout your website with subdomain (eg www): *https://<subdomain>.<your-domain>.com*
+
+Congratulations! Now you have cloudflare tunnel up and running and your website is public.
         
 
 

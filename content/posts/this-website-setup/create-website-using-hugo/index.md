@@ -8,7 +8,7 @@ showDateUpdated = true
 draft = false
 +++
 
-This article will explain, how to use *hugo* to create your own website with awesome themes.
+This article explains how to use *hugo* to create your own website with awesome themes.
 
 ## Installing Hugo and initial setup
 
