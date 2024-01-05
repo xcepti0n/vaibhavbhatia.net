@@ -1,16 +1,15 @@
-## Website created using  and 
+## Personal Website.
 
 Check it out at https://www.vaibhavbhatia.net
 
-This is my personal website. Where I will be posting all my learnings.
+This is my personal website, where I will be posting all my learnings.
 
-To know more about me: 
-Checkout [About](https://www.vaibhavbhatia.net/about/) section
+To know more about me: checkout [About](https://www.vaibhavbhatia.net/about/) section
 
 
 Checkout my [Blog](https://www.vaibhavbhatia.net/posts/) to know how I have setup the website, including hosting, ssl certificate and creating it using hugo. 
 
-As bonus all the issues I have faced are also added as part of learnings in each blog post.
+As bonus, all my learnings are captured as part of my Blogs as well.
 
 Lets keep learning!
 
