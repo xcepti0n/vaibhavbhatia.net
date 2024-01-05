@@ -131,7 +131,7 @@
   
 </head>
 <body
-    class="flex flex-col h-screen px-6 m-auto text-lg leading-7 max-w-7xl bg-neutral text-neutral-900 dark:bg-neutral-800 dark:text-neutral sm:px-14 md:px-24 lg:px-32"
+    class="flex flex-col h-screen px-6 m-auto text-lg leading-7 max-w-7xl bg-neutral text-neutral-900 dark:bg-neutral-800 dark:text-neutral sm:px-14 md:px-24 lg:px-16"
   >
     <div id="the-top" class="absolute flex self-center">
       <a
@@ -347,7 +347,7 @@
       <main id="main-content" class="grow">
         
   
-  <header>
+  <header style="max-width: 90ch;">
     
       <ol class="text-sm text-neutral-500 dark:text-neutral-400 print:hidden">
   
@@ -389,20 +389,53 @@
     <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">Create and host your own website using nginx, cloudflare and Hugo</h1>
   </header>
   <section
-    class="mt-0 prose flex max-w-full flex-col dark:prose-invert lg:flex-row"
+    class="mt-12 prose flex max-w-full flex-col dark:prose-invert lg:flex-row"
   >
     
-    <div class="min-w-0 min-h-0 max-w-prose grow">
-      <p>Here is a step by step guide to help you host your own first website.</p>
-<h4 id="to-host-your-own-website-you-will-need" class="relative group">To host your own website you will need <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#to-host-your-own-website-you-will-need" aria-label="Anchor">#</a></span></h4><ul>
-<li>A <em>domain</em> (eg - &lt;your name&gt;.com), if you want to host publically.
-If you don&rsquo;t have it already you can get one by following this <a href="https://developers.cloudflare.com/registrar/get-started/register-domain/" target="_blank" rel="noreferrer">guide</a>. Cloudflare is one of Domain pprovider, you can choose your favorite domain provider.</li>
-<li>A server - It can be a docker container on your own Laptop, a mini PC running proxmox or a server running on linode or any other server providers..
-You can use Debian, Ubuntu or any other OS of your choice. (Articles below considers you have Debian 12)</li>
+      <div class="order-first px-0 lg:order-last lg:max-w-xs lg:ps-8">
+        <div class="toc ps-5 lg:sticky lg:top-10">
+          <details open class="-ms-5 mt-0 overflow-hidden rounded-lg ps-5">
+  <summary
+    class="-ms-5 block cursor-pointer bg-neutral-100 py-1 ps-5 text-lg font-semibold text-neutral-800 dark:bg-neutral-700 dark:text-neutral-100 lg:hidden"
+  >
+    Table of Contents
+  </summary>
+  <div class="-ms-5 border-s border-dotted border-neutral-300 py-2 ps-5 dark:border-neutral-600">
+    <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#to-host-your-own-website-you-will-need">To host your own website you will need</a></li>
+        <li><a href="#here-is-the-order-i-went-throgh-for-creating-my-website">Here is the order I went throgh for creating my website:</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</details>
+
+        </div>
+      </div>
+    
+    <div class="min-w-0 min-h-0 grow" style="max-width: 80ch;">
+      <p>Here is a step by step guide to help you create and host your own first website.</p>
+<h3 id="to-host-your-own-website-you-will-need" class="relative group">To host your own website you will need <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#to-host-your-own-website-you-will-need" aria-label="Anchor">#</a></span></h3><ul>
+<li>A <strong>domain</strong> : (eg - &lt;your name&gt;.com), if you want to host publically.
+<ul>
+<li>If you don&rsquo;t have it already you can get one by following this <a href="https://developers.cloudflare.com/registrar/get-started/register-domain/" target="_blank" rel="noreferrer">guide</a>.</li>
+<li>Cloudflare is one of the domain providers, you can choose any other of your favorite domain providers.</li>
 </ul>
-<p>You will learn as you go through the articles, as I did when I followed the process of setting up this website.</p>
-<p><strong>It is recommended to follow this order if you have no initial setup</strong></p>
-<p><em>Setup HTTPS server using NGINX</em> -&gt; <em>Host your website using Cloudflare tunnel</em> -&gt; <em>Make website using Hugo</em></p>
+</li>
+<li>A <strong>server</strong>: It can be a docker container on your own Laptop, a mini PC running proxmox, a server running on linode or any other server providers.
+<ul>
+<li>You can use Debian, Ubuntu or any other OS of your choice.</li>
+<li>I have used Debian, so articles below are around Debian 12.</li>
+</ul>
+</li>
+</ul>
+<p>I hope you learn something new as you go through the articles. I definitely did, when I started the process of setting up this website.</p>
+<h3 id="here-is-the-order-i-went-throgh-for-creating-my-website" class="relative group">Here is the order I went throgh for creating my website: <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#here-is-the-order-i-went-throgh-for-creating-my-website" aria-label="Anchor">#</a></span></h3><p><em>Setup HTTPS server using NGINX</em> -&gt; <em>Host your website using Cloudflare tunnel</em> -&gt; <em>Make an awesome website using Hugo</em></p>
+<p>Feel free to choose the order as per your liking. Happy Reading!</p>
 
     </div>
   </section>
@@ -483,6 +516,40 @@ You can use Debian, Ubuntu or any other OS of your choice. (Articles below consi
   </div>
 
   
+  
+    <div class="flex flex-wrap my-1 text-xs leading-relaxed text-neutral-500 dark:text-neutral-400 ">
+      
+        
+      
+        
+          
+            <a
+              href="/tags/server/"
+              class="mx-1 my-1 rounded-md border border-neutral-200 px-1 py-[1px] hover:border-primary-300 hover:text-primary-700 dark:border-neutral-600 dark:hover:border-primary-600 dark:hover:text-primary-400"
+              >server</a
+            >
+          
+            <a
+              href="/tags/nginx/"
+              class="mx-1 my-1 rounded-md border border-neutral-200 px-1 py-[1px] hover:border-primary-300 hover:text-primary-700 dark:border-neutral-600 dark:hover:border-primary-600 dark:hover:text-primary-400"
+              >nginx</a
+            >
+          
+            <a
+              href="/tags/https/"
+              class="mx-1 my-1 rounded-md border border-neutral-200 px-1 py-[1px] hover:border-primary-300 hover:text-primary-700 dark:border-neutral-600 dark:hover:border-primary-600 dark:hover:text-primary-400"
+              >https</a
+            >
+          
+            <a
+              href="/tags/cloudflare/"
+              class="mx-1 my-1 rounded-md border border-neutral-200 px-1 py-[1px] hover:border-primary-300 hover:text-primary-700 dark:border-neutral-600 dark:hover:border-primary-600 dark:hover:text-primary-400"
+              >cloudflare</a
+            >
+          
+        
+      
+    </div>
   
 
 
@@ -570,12 +637,52 @@ You can use Debian, Ubuntu or any other OS of your choice. (Articles below consi
 
   
   
+    <div class="flex flex-wrap my-1 text-xs leading-relaxed text-neutral-500 dark:text-neutral-400 ">
+      
+        
+      
+        
+          
+            <a
+              href="/tags/hosting/"
+              class="mx-1 my-1 rounded-md border border-neutral-200 px-1 py-[1px] hover:border-primary-300 hover:text-primary-700 dark:border-neutral-600 dark:hover:border-primary-600 dark:hover:text-primary-400"
+              >hosting</a
+            >
+          
+            <a
+              href="/tags/https/"
+              class="mx-1 my-1 rounded-md border border-neutral-200 px-1 py-[1px] hover:border-primary-300 hover:text-primary-700 dark:border-neutral-600 dark:hover:border-primary-600 dark:hover:text-primary-400"
+              >https</a
+            >
+          
+            <a
+              href="/tags/cloudflare/"
+              class="mx-1 my-1 rounded-md border border-neutral-200 px-1 py-[1px] hover:border-primary-300 hover:text-primary-700 dark:border-neutral-600 dark:hover:border-primary-600 dark:hover:text-primary-400"
+              >cloudflare</a
+            >
+          
+            <a
+              href="/tags/cloudflare-tunnel/"
+              class="mx-1 my-1 rounded-md border border-neutral-200 px-1 py-[1px] hover:border-primary-300 hover:text-primary-700 dark:border-neutral-600 dark:hover:border-primary-600 dark:hover:text-primary-400"
+              >cloudflare tunnel</a
+            >
+          
+            <a
+              href="/tags/cloudflared/"
+              class="mx-1 my-1 rounded-md border border-neutral-200 px-1 py-[1px] hover:border-primary-300 hover:text-primary-700 dark:border-neutral-600 dark:hover:border-primary-600 dark:hover:text-primary-400"
+              >cloudflared</a
+            >
+          
+        
+      
+    </div>
+  
 
 
     </div>
     
       <div class="prose py-1 dark:prose-invert">
-        This article tells about how to host a website publically using cloudflare tunnel, that is running on localhost.
+        This article explains how to host a website publically using cloudflare tunnel, that is running on localhost.
       </div>
     
   </div>
@@ -586,16 +693,16 @@ You can use Debian, Ubuntu or any other OS of your choice. (Articles below consi
     <div class="flex-none pe-4 sm:pe-6 ">
       <a
         href="
-          /posts/this-website-setup/user-interface/
+          /posts/this-website-setup/create-website-using-hugo/
         "
-        aria-label="Make website using Hugo"
+        aria-label="Make an awesome website using Hugo"
       >
         <img
           alt=""
           
-            class="w-24 rounded-md sm:w-40" srcset="/posts/this-website-setup/user-interface/thumb_hu5c5ccc0b6930b8a852e7035fe144fbbf_4737_160x120_fill_box_smart1_3.png
-            160w,/posts/this-website-setup/user-interface/thumb_hu5c5ccc0b6930b8a852e7035fe144fbbf_4737_320x240_fill_box_smart1_3.png 2x"
-            src="/posts/this-website-setup/user-interface/thumb_hu5c5ccc0b6930b8a852e7035fe144fbbf_4737_160x120_fill_box_smart1_3.png"
+            class="w-24 rounded-md sm:w-40" srcset="/posts/this-website-setup/create-website-using-hugo/thumb_hu5c5ccc0b6930b8a852e7035fe144fbbf_4737_160x120_fill_box_smart1_3.png
+            160w,/posts/this-website-setup/create-website-using-hugo/thumb_hu5c5ccc0b6930b8a852e7035fe144fbbf_4737_320x240_fill_box_smart1_3.png 2x"
+            src="/posts/this-website-setup/create-website-using-hugo/thumb_hu5c5ccc0b6930b8a852e7035fe144fbbf_4737_160x120_fill_box_smart1_3.png"
             width="160"
             height="120"
           
@@ -610,8 +717,8 @@ You can use Debian, Ubuntu or any other OS of your choice. (Articles below consi
       
         <a
           class="text-neutral-800 decoration-primary-500 hover:underline hover:underline-offset-2 dark:text-neutral"
-          href="/posts/this-website-setup/user-interface/"
-          >Make website using Hugo</a
+          href="/posts/this-website-setup/create-website-using-hugo/"
+          >Make an awesome website using Hugo</a
         >
       
       
@@ -634,6 +741,8 @@ You can use Debian, Ubuntu or any other OS of your choice. (Articles below consi
   
 
   
+    
+  
 
   
 
@@ -647,7 +756,7 @@ You can use Debian, Ubuntu or any other OS of your choice. (Articles below consi
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2024-01-02 23:03:11 -0800 PST">2 January 2024</time><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">4 mins</span>
+      <time datetime="2024-01-02 23:03:11 -0800 PST">2 January 2024</time><span class="px-2 text-primary-500">&middot;</span><time datetime="2024-01-05 00:00:00 &#43;0000 UTC">Updated: 5 January 2024</time><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">4 mins</span>
     
 
     
@@ -656,12 +765,46 @@ You can use Debian, Ubuntu or any other OS of your choice. (Articles below consi
 
   
   
+    <div class="flex flex-wrap my-1 text-xs leading-relaxed text-neutral-500 dark:text-neutral-400 ">
+      
+        
+      
+        
+          
+            <a
+              href="/tags/website/"
+              class="mx-1 my-1 rounded-md border border-neutral-200 px-1 py-[1px] hover:border-primary-300 hover:text-primary-700 dark:border-neutral-600 dark:hover:border-primary-600 dark:hover:text-primary-400"
+              >website</a
+            >
+          
+            <a
+              href="/tags/ui/"
+              class="mx-1 my-1 rounded-md border border-neutral-200 px-1 py-[1px] hover:border-primary-300 hover:text-primary-700 dark:border-neutral-600 dark:hover:border-primary-600 dark:hover:text-primary-400"
+              >ui</a
+            >
+          
+            <a
+              href="/tags/hugo/"
+              class="mx-1 my-1 rounded-md border border-neutral-200 px-1 py-[1px] hover:border-primary-300 hover:text-primary-700 dark:border-neutral-600 dark:hover:border-primary-600 dark:hover:text-primary-400"
+              >hugo</a
+            >
+          
+            <a
+              href="/tags/themes/"
+              class="mx-1 my-1 rounded-md border border-neutral-200 px-1 py-[1px] hover:border-primary-300 hover:text-primary-700 dark:border-neutral-600 dark:hover:border-primary-600 dark:hover:text-primary-400"
+              >themes</a
+            >
+          
+        
+      
+    </div>
+  
 
 
     </div>
     
       <div class="prose py-1 dark:prose-invert">
-        This article will explain how to use hugo to create your own website with awesome templates.
+        This article explains how to use hugo to create your own website with awesome themes.
       </div>
     
   </div>
@@ -686,15 +829,6 @@ You can use Debian, Ubuntu or any other OS of your choice. (Articles below consi
             &copy;
             2024
             Vaibhav Bhatia
-        </p>
-      
-      
-      
-        <p class="text-xs text-neutral-500 dark:text-neutral-400">
-          
-          
-          Powered by <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
-            href="https://gohugo.io/" target="_blank" rel="noopener noreferrer">Hugo</a> &amp; <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500" href="https://github.com/jpanther/congo" target="_blank" rel="noopener noreferrer">Congo</a>
         </p>
       
     </div>

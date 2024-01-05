@@ -20,21 +20,21 @@
       <link>https://www.vaibhavbhatia.net/about/</link>
       <pubDate>Tue, 02 Jan 2024 23:04:02 -0800</pubDate>
       <guid>https://www.vaibhavbhatia.net/about/</guid>
-      <description>I am Software Development Engineer for around 5 years.</description>
+      <description>I have been a Software Development Engineer for .</description>
     </item>
     <item>
       <title>Host your website using Cloudflare tunnel</title>
       <link>https://www.vaibhavbhatia.net/posts/this-website-setup/hosting/</link>
       <pubDate>Tue, 02 Jan 2024 23:04:02 -0800</pubDate>
       <guid>https://www.vaibhavbhatia.net/posts/this-website-setup/hosting/</guid>
-      <description>This article tells about how to host a website publically using cloudflare tunnel, that is running on localhost.</description>
+      <description>This article explains how to host a website publically using cloudflare tunnel, that is running on localhost.</description>
     </item>
     <item>
-      <title>Make website using Hugo</title>
-      <link>https://www.vaibhavbhatia.net/posts/this-website-setup/user-interface/</link>
+      <title>Make an awesome website using Hugo</title>
+      <link>https://www.vaibhavbhatia.net/posts/this-website-setup/create-website-using-hugo/</link>
       <pubDate>Tue, 02 Jan 2024 23:03:11 -0800</pubDate>
-      <guid>https://www.vaibhavbhatia.net/posts/this-website-setup/user-interface/</guid>
-      <description>This article will explain how to use hugo to create your own website with awesome templates.</description>
+      <guid>https://www.vaibhavbhatia.net/posts/this-website-setup/create-website-using-hugo/</guid>
+      <description>This article explains how to use hugo to create your own website with awesome themes.</description>
     </item>
   </channel>
 </rss>

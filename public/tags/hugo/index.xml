@@ -9,11 +9,11 @@
     <lastBuildDate>Tue, 02 Jan 2024 23:03:11 -0800</lastBuildDate>
     <atom:link href="https://www.vaibhavbhatia.net/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Make website using Hugo</title>
-      <link>https://www.vaibhavbhatia.net/posts/this-website-setup/user-interface/</link>
+      <title>Make an awesome website using Hugo</title>
+      <link>https://www.vaibhavbhatia.net/posts/this-website-setup/create-website-using-hugo/</link>
       <pubDate>Tue, 02 Jan 2024 23:03:11 -0800</pubDate>
-      <guid>https://www.vaibhavbhatia.net/posts/this-website-setup/user-interface/</guid>
-      <description>This article will explain how to use hugo to create your own website with awesome templates.</description>
+      <guid>https://www.vaibhavbhatia.net/posts/this-website-setup/create-website-using-hugo/</guid>
+      <description>This article explains how to use hugo to create your own website with awesome themes.</description>
     </item>
   </channel>
 </rss>

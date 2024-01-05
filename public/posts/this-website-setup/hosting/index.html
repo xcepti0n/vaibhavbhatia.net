@@ -109,7 +109,7 @@
     "name": "Host your website using Cloudflare tunnel",
     "headline": "Host your website using Cloudflare tunnel",
     "description": "This articcle with explain step by step on how to host your website via cloudflare tunnel.",
-    "abstract": "This article tells about how to host a website publically using cloudflare tunnel, that is running on localhost.",
+    "abstract": "This article explains how to host a website publically using cloudflare tunnel, that is running on localhost.",
     "inLanguage": "en",
     "url" : "https:\/\/www.vaibhavbhatia.net\/posts\/this-website-setup\/hosting\/",
     "author" : {
@@ -125,7 +125,7 @@
     "keywords": ["hosting","https","cloudflare","cloudflare tunnel","cloudflared"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "313"
+    "wordCount": "339"
   }
   </script>
 
@@ -157,7 +157,7 @@
   
 </head>
 <body
-    class="flex flex-col h-screen px-6 m-auto text-lg leading-7 max-w-7xl bg-neutral text-neutral-900 dark:bg-neutral-800 dark:text-neutral sm:px-14 md:px-24 lg:px-32"
+    class="flex flex-col h-screen px-6 m-auto text-lg leading-7 max-w-7xl bg-neutral text-neutral-900 dark:bg-neutral-800 dark:text-neutral sm:px-14 md:px-24 lg:px-16"
   >
     <div id="the-top" class="absolute flex self-center">
       <a
@@ -373,7 +373,7 @@
       <main id="main-content" class="grow">
         
   <article>
-    <header class="max-w-prose">
+    <header style="max-width: 90ch;">
       
         <ol class="text-sm text-neutral-500 dark:text-neutral-400 print:hidden">
   
@@ -543,7 +543,12 @@
   <ul>
     <li><a href="#hosting-on-cloudflare">Hosting on Cloudflare</a>
       <ul>
-        <li><a href="#creating-a-tunnel">Creating a tunnel</a></li>
+        <li><a href="#creating-a-tunnel">Creating a tunnel</a>
+          <ul>
+            <li><a href="#references">References:</a></li>
+            <li><a href="#steps-to-create-a-cloudflared-tunnel">Steps to create a cloudflared tunnel:</a></li>
+          </ul>
+        </li>
       </ul>
     </li>
   </ul>
@@ -554,19 +559,17 @@
           </div>
         </div>
       
-      <div class="min-w-0 min-h-0 max-w-prose grow">
-        <p>This article tells about how to host a website publically using cloudflare tunnel, that is running on localhost.</p>
+      <div class="min-w-0 min-h-0 grow" style="max-width:90ch;">
+        <p>This article explains how to host a website publically using cloudflare tunnel, that is running on localhost.</p>
 <!-- more -->
 <h2 id="hosting-on-cloudflare" class="relative group">Hosting on Cloudflare <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#hosting-on-cloudflare" aria-label="Anchor">#</a></span></h2><p>I am assuming you have already setup the cloudflare account with your domain.</p>
 <h3 id="creating-a-tunnel" class="relative group">Creating a tunnel <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#creating-a-tunnel" aria-label="Anchor">#</a></span></h3><p>Lets create a cloudflared tunnel.</p>
-<p>References:
-Creating tunnel: <a href="https://developers.cloudflare.com/cloudflare-one/connections/connect-networks/get-started/" target="_blank" rel="noreferrer">https://developers.cloudflare.com/cloudflare-one/connections/connect-networks/get-started/</a>
-Creating tunnel using dashboard (managed-remotely): <a href="https://developers.cloudflare.com/cloudflare-one/connections/connect-networks/get-started/create-remote-tunnel/" target="_blank" rel="noreferrer">https://developers.cloudflare.com/cloudflare-one/connections/connect-networks/get-started/create-remote-tunnel/</a></p>
-<blockquote>
+<h4 id="references" class="relative group">References: <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#references" aria-label="Anchor">#</a></span></h4><ul>
+<li>Creating tunnel: <a href="https://developers.cloudflare.com/cloudflare-one/connections/connect-networks/get-started/" target="_blank" rel="noreferrer">https://developers.cloudflare.com/cloudflare-one/connections/connect-networks/get-started/</a></li>
+<li>Creating tunnel using dashboard (managed-remotely): <a href="https://developers.cloudflare.com/cloudflare-one/connections/connect-networks/get-started/create-remote-tunnel/" target="_blank" rel="noreferrer">https://developers.cloudflare.com/cloudflare-one/connections/connect-networks/get-started/create-remote-tunnel/</a></li>
+</ul>
 <p>You should follow above guides as they are kept up to date by Cloudflare, mine can be old depending on when you checking it.</p>
-</blockquote>
-<p>Steps to create a cloudflared tunnel:</p>
-<ol>
+<h4 id="steps-to-create-a-cloudflared-tunnel" class="relative group">Steps to create a cloudflared tunnel: <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#steps-to-create-a-cloudflared-tunnel" aria-label="Anchor">#</a></span></h4><ol>
 <li>Go to <a href="https://one.dash.cloudflare.com/" target="_blank" rel="noreferrer">Zero Trust</a></li>
 <li>Select your account.</li>
 <li>Go to <em>Access</em> &gt; <em>Tunnels</em>.</li>
@@ -575,7 +578,7 @@ Creating tunnel using dashboard (managed-remotely): <a href="https://developers.
 <li>Click on <strong>Save tunnel</strong>.</li>
 <li>You will be now in <strong>Install and run Connectors</strong> section.</li>
 <li>Choose your Operating system.</li>
-<li>Run the command provided where your server is hosted.</li>
+<li>Copy the commands provided on dashboard and run it on your server.</li>
 <li>Now cloudflared should be running locally. (Confirm using systemctl status cloudflared)</li>
 <li>It should also show on the dashboard that you have a connector connected.</li>
 </ol>
@@ -594,10 +597,12 @@ Creating tunnel using dashboard (managed-remotely): <a href="https://developers.
 </ol>
 </li>
 </ol>
+<p>Checkout your website with subdomain (eg www): <em>https://<subdomain>.<your-domain>.com</em></p>
+<p>Congratulations! Now you have cloudflare tunnel up and running and your website is public.</p>
 
       </div>
     </section>
-    <footer class="pt-8 max-w-prose print:hidden">
+    <footer class="pt-8 print:hidden" style="max-width:80ch;">
       
   <div class="flex">
     
@@ -701,11 +706,11 @@ Creating tunnel using dashboard (managed-remotely): <a href="https://developers.
         </span>
         <span>
           
-            <a class="group flex text-right" href="/posts/this-website-setup/user-interface/">
+            <a class="group flex text-right" href="/posts/this-website-setup/create-website-using-hugo/">
               <span class="flex flex-col">
                 <span
                   class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
-                  >Make website using Hugo</span
+                  >Make an awesome website using Hugo</span
                 >
                 <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
                   
@@ -753,15 +758,6 @@ Creating tunnel using dashboard (managed-remotely): <a href="https://developers.
             &copy;
             2024
             Vaibhav Bhatia
-        </p>
-      
-      
-      
-        <p class="text-xs text-neutral-500 dark:text-neutral-400">
-          
-          
-          Powered by <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
-            href="https://gohugo.io/" target="_blank" rel="noopener noreferrer">Hugo</a> &amp; <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500" href="https://github.com/jpanther/congo" target="_blank" rel="noopener noreferrer">Congo</a>
         </p>
       
     </div>

@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>ui on Home</title>
-    <link>https://www.vaibhavbhatia.net/tags/ui/</link>
-    <description>Recent content in ui on Home</description>
+    <title>themes on Home</title>
+    <link>https://www.vaibhavbhatia.net/tags/themes/</link>
+    <description>Recent content in themes on Home</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Tue, 02 Jan 2024 23:03:11 -0800</lastBuildDate>
-    <atom:link href="https://www.vaibhavbhatia.net/tags/ui/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://www.vaibhavbhatia.net/tags/themes/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Make an awesome website using Hugo</title>
       <link>https://www.vaibhavbhatia.net/posts/this-website-setup/create-website-using-hugo/</link>

@@ -13,7 +13,7 @@
       <link>https://www.vaibhavbhatia.net/posts/this-website-setup/hosting/</link>
       <pubDate>Tue, 02 Jan 2024 23:04:02 -0800</pubDate>
       <guid>https://www.vaibhavbhatia.net/posts/this-website-setup/hosting/</guid>
-      <description>This article tells about how to host a website publically using cloudflare tunnel, that is running on localhost.</description>
+      <description>This article explains how to host a website publically using cloudflare tunnel, that is running on localhost.</description>
     </item>
   </channel>
 </rss>

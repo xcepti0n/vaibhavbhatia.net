@@ -16,8 +16,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="theme-color" content="rgb(255,255,255)" />
   
-  <title>Setup HTTPS server using NGINX &middot; Home</title>
-    <meta name="title" content="Setup HTTPS server using NGINX &middot; Home" />
+  <title>Make an awesome website using Hugo &middot; Home</title>
+    <meta name="title" content="Make an awesome website using Hugo &middot; Home" />
   
   
   
@@ -68,13 +68,13 @@
   <meta
     name="description"
     content="
-      Setup HTTPS server using NGINX.
+      Creating 
     "
   />
   
   
   
-  <link rel="canonical" href="https://www.vaibhavbhatia.net/posts/this-website-setup/server-and-certs/" />
+  <link rel="canonical" href="https://www.vaibhavbhatia.net/posts/this-website-setup/create-website-using-hugo/" />
   
   
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
@@ -88,17 +88,17 @@
   
   
   
-  <meta property="og:title" content="Setup HTTPS server using NGINX" />
-<meta property="og:description" content="Setup HTTPS server using NGINX." />
+  <meta property="og:title" content="Make an awesome website using Hugo" />
+<meta property="og:description" content="Creating " />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://www.vaibhavbhatia.net/posts/this-website-setup/server-and-certs/" /><meta property="og:image" content="https://www.vaibhavbhatia.net/posts/this-website-setup/server-and-certs/cover.png" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2024-01-02T23:04:05-08:00" />
-<meta property="article:modified_time" content="2024-01-02T00:00:00+00:00" />
+<meta property="og:url" content="https://www.vaibhavbhatia.net/posts/this-website-setup/create-website-using-hugo/" /><meta property="og:image" content="https://www.vaibhavbhatia.net/posts/this-website-setup/create-website-using-hugo/cover.png" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2024-01-02T23:03:11-08:00" />
+<meta property="article:modified_time" content="2024-01-05T00:00:00+00:00" />
 
 
   <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:image" content="https://www.vaibhavbhatia.net/posts/this-website-setup/server-and-certs/cover.png" /><meta name="twitter:title" content="Setup HTTPS server using NGINX"/>
-<meta name="twitter:description" content="Setup HTTPS server using NGINX."/>
+<meta name="twitter:image" content="https://www.vaibhavbhatia.net/posts/this-website-setup/create-website-using-hugo/cover.png" /><meta name="twitter:title" content="Make an awesome website using Hugo"/>
+<meta name="twitter:description" content="Creating "/>
 
   
   <script type="application/ld+json">
@@ -106,26 +106,26 @@
     "@context": "https://schema.org",
     "@type": "Article",
     "articleSection": "Blog",
-    "name": "Setup HTTPS server using NGINX",
-    "headline": "Setup HTTPS server using NGINX",
-    "description": "Setup HTTPS server using NGINX.",
-    "abstract": "This article explains how to host a plain website using nginx server on https locally on Debian 12.",
+    "name": "Make an awesome website using Hugo",
+    "headline": "Make an awesome website using Hugo",
+    "description": "Creating ",
+    "abstract": "This article explains how to use hugo to create your own website with awesome themes.",
     "inLanguage": "en",
-    "url" : "https:\/\/www.vaibhavbhatia.net\/posts\/this-website-setup\/server-and-certs\/",
+    "url" : "https:\/\/www.vaibhavbhatia.net\/posts\/this-website-setup\/create-website-using-hugo\/",
     "author" : {
       "@type": "Person",
       "name": "Vaibhav Bhatia"
     },
     "copyrightYear": "2024",
-    "dateCreated": "2024-01-02T23:04:05-08:00",
-    "datePublished": "2024-01-02T23:04:05-08:00",
+    "dateCreated": "2024-01-02T23:03:11-08:00",
+    "datePublished": "2024-01-02T23:03:11-08:00",
     
-    "dateModified": "2024-01-02T00:00:00\u002b00:00",
+    "dateModified": "2024-01-05T00:00:00\u002b00:00",
     
-    "keywords": ["server","nginx","https","cloudflare"],
+    "keywords": ["website","ui","hugo","themes"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "452"
+    "wordCount": "833"
   }
   </script>
 
@@ -414,8 +414,8 @@
   <li class="inline hidden">
     <a
       class="hover:underline decoration-neutral-300 dark:underline-neutral-600"
-      href="/posts/this-website-setup/server-and-certs/"
-      >Setup HTTPS server using NGINX</a
+      href="/posts/this-website-setup/create-website-using-hugo/"
+      >Make an awesome website using Hugo</a
     ><span class="px-1 text-primary-500">/</span>
   </li>
 
@@ -424,7 +424,7 @@
 
       
       <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
-        Setup HTTPS server using NGINX
+        Make an awesome website using Hugo
       </h1>
       <div class="mt-8 mb-12 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
         
@@ -446,6 +446,8 @@
   
 
   
+    
+  
 
   
 
@@ -459,7 +461,7 @@
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2024-01-02 23:04:05 -0800 PST">2 January 2024</time><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">3 mins</span>
+      <time datetime="2024-01-02 23:03:11 -0800 PST">2 January 2024</time><span class="px-2 text-primary-500">&middot;</span><time datetime="2024-01-05 00:00:00 &#43;0000 UTC">Updated: 5 January 2024</time><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">4 mins</span>
     
 
     
@@ -475,27 +477,27 @@
         
           
             <a
-              href="/tags/server/"
+              href="/tags/website/"
               class="mx-1 my-1 rounded-md border border-neutral-200 px-1 py-[1px] hover:border-primary-300 hover:text-primary-700 dark:border-neutral-600 dark:hover:border-primary-600 dark:hover:text-primary-400"
-              >server</a
+              >website</a
             >
           
             <a
-              href="/tags/nginx/"
+              href="/tags/ui/"
               class="mx-1 my-1 rounded-md border border-neutral-200 px-1 py-[1px] hover:border-primary-300 hover:text-primary-700 dark:border-neutral-600 dark:hover:border-primary-600 dark:hover:text-primary-400"
-              >nginx</a
+              >ui</a
             >
           
             <a
-              href="/tags/https/"
+              href="/tags/hugo/"
               class="mx-1 my-1 rounded-md border border-neutral-200 px-1 py-[1px] hover:border-primary-300 hover:text-primary-700 dark:border-neutral-600 dark:hover:border-primary-600 dark:hover:text-primary-400"
-              >https</a
+              >hugo</a
             >
           
             <a
-              href="/tags/cloudflare/"
+              href="/tags/themes/"
               class="mx-1 my-1 rounded-md border border-neutral-200 px-1 py-[1px] hover:border-primary-300 hover:text-primary-700 dark:border-neutral-600 dark:hover:border-primary-600 dark:hover:text-primary-400"
-              >cloudflare</a
+              >themes</a
             >
           
         
@@ -510,10 +512,10 @@
           <img
             class="mb-6 -mt-4 rounded-md"
             
-              width="293"
-              height="172"
+              width="363"
+              height="139"
               
-                src="/posts/this-website-setup/server-and-certs/cover.png"
+                src="/posts/this-website-setup/create-website-using-hugo/cover.png"
               
             
             alt=""
@@ -535,18 +537,19 @@
   <div class="-ms-5 border-s border-dotted border-neutral-300 py-2 ps-5 dark:border-neutral-600">
     <nav id="TableOfContents">
   <ul>
-    <li><a href="#setting-up-plain-indexhtml-on-https-locally">Setting up plain index.html on https locally.</a>
+    <li><a href="#installing-hugo-and-initial-setup">Installing Hugo and initial setup</a>
       <ul>
-        <li>
+        <li><a href="#resources-and-steps-to-setup-your-website">Resources and steps to setup your website.</a></li>
+        <li><a href="#syncing-the-updated-pages-to-your-server">Syncing the updated pages to your server.</a>
           <ul>
-            <li><a href="#setting-up-nginx-server">Setting up nginx server.</a></li>
-            <li><a href="#hosting-custom-indexhtml-locallly">Hosting custom index.html locallly</a></li>
-            <li><a href="#creating-certificates">Creating certificates</a></li>
+            <li><a href="#what-i-did-for-syncing-website-to-server">What I did for syncing website to server</a></li>
+            <li><a href="#other-options-on-upload-website-to-server-other-than-git">Other options on upload website to server (other than git)</a></li>
+            <li><a href="#automating-the-sync">Automating the sync</a></li>
           </ul>
         </li>
+        <li><a href="#learnings-and-resources">Learnings and resources</a></li>
       </ul>
     </li>
-    <li><a href="#resources">Resources:</a></li>
   </ul>
 </nav>
   </div>
@@ -556,92 +559,105 @@
         </div>
       
       <div class="min-w-0 min-h-0 grow" style="max-width:90ch;">
-        <p>This article explains how to host a plain website using nginx server on https locally on Debian 12.</p>
-<h2 id="setting-up-plain-indexhtml-on-https-locally" class="relative group">Setting up plain index.html on https locally. <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#setting-up-plain-indexhtml-on-https-locally" aria-label="Anchor">#</a></span></h2><p>We will be using nginx server in this article, for locally hosting a simple webpage.</p>
-<h4 id="setting-up-nginx-server" class="relative group">Setting up nginx server. <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#setting-up-nginx-server" aria-label="Anchor">#</a></span></h4><p>Below are Debian commands, if you are using other OS or BSD, check official installaton link: <a href="https://www.nginx.com/resources/wiki/start/topics/tutorials/install/" target="_blank" rel="noreferrer">https://www.nginx.com/resources/wiki/start/topics/tutorials/install/</a></p>
+        <p>This article explains how to use <em>hugo</em> to create your own website with awesome themes.</p>
+<h2 id="installing-hugo-and-initial-setup" class="relative group">Installing Hugo and initial setup <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#installing-hugo-and-initial-setup" aria-label="Anchor">#</a></span></h2><p>Now that you have your wesbite server up and running with a webpage, lets make the website more awesome.</p>
+<h3 id="resources-and-steps-to-setup-your-website" class="relative group">Resources and steps to setup your website. <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#resources-and-steps-to-setup-your-website" aria-label="Anchor">#</a></span></h3><ul>
+<li>Install <a href="https://gohugo.io/installation/" target="_blank" rel="noreferrer">Hugo</a></li>
+<li>Install <a href="https://git-scm.com/book/en/v2/Getting-Started-Installing-Git" target="_blank" rel="noreferrer">Git</a> (if you don&rsquo;t have it installed.)</li>
+<li>Install <a href="https://learn.microsoft.com/en-us/powershell/scripting/install/installing-powershell-on-windows" target="_blank" rel="noreferrer">Powershell</a> if you are a windows user.
 <ul>
-<li>Update apt package indexes : <code>sudo apt update</code></li>
-<li>Install nginx : <code>sudo apt install nginx -y</code></li>
-<li>Confirm that nginx is running using <code>systemctl status nginx</code></li>
-<li>Checkout the server at <code>http://&lt;your-server-ip&gt;</code></li>
+<li>NOTE: PowerShell and Windows PowerShell are different applications.</li>
 </ul>
-<h4 id="hosting-custom-indexhtml-locallly" class="relative group">Hosting custom index.html locallly <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#hosting-custom-indexhtml-locallly" aria-label="Anchor">#</a></span></h4><p>In this step we will change the default page to a custom index.html.</p>
+</li>
+<li>Run command <code>hugo version</code> on Powershell terminal to confirm that hugo is working.</li>
+</ul>
+<p><strong>Approach 1: Using this website git repository as base</strong></p>
+<p>I would recommend this if you are new to all commands and stuff. But If you know a bit around computers and creating websites, I would suggest checking out approach 2 below.</p>
 <ul>
-<li>Disable default configuration <code>unlink /etc/nginx/sites-enabled/default</code></li>
-<li>Create a new configuration <code>vi /etc/nginx/sites-available/&lt;your-domain.com&gt;</code>. You can use any name but using a domain name is preferred as it is easy to remember and also tells what the configuration is for.</li>
-<li>Paste the below configuration with updated domain name.
-<pre tabindex="0"><code>    server {
-        listen 80;
-        listen [::]:80;
-        server_name  your_domain.com;
-
-        root /var/www/your_domain.com;
-        index index.html;
-
-        location / {
-            try_files $uri $uri/ =404;
-        }
-    }
-</code></pre></li>
-<li>Enable your configuration <code>ln -s /etc/nginx/sites-available/&lt;your-domain.com&gt; /etc/nginx/sites-enabled/</code></li>
-<li>As you might have guessed all sites configuration are available here <code>/etc/nginx/sites-available/</code> and when one wants to enable, their sym links can be added here:<code>/etc/nginx/sites-enabled/</code></li>
-<li>Check the configuration if its valid <code>nginx -t</code></li>
-<li>Restart ngninx to use the updated configuration <code>systemctl restart nginx</code></li>
+<li>Fork my repo from git: <a href="https://github.com/xcepti0n/vaibhavbhatia.net/" target="_blank" rel="noreferrer">https://github.com/xcepti0n/vaibhavbhatia.net/</a></li>
+<li>Choose name of your repo to your domain or something of your liking.</li>
+<li>Use <code>git clone &lt;your-repository-link.git&gt;</code> to clone your repository locally.</li>
+<li>Change your current directory <code>cd &lt;your-repo-name&gt;</code></li>
+<li>Run <code>git pull --recurse-submodules</code> to pull congo submodule.</li>
+<li>Run <code>hugo server</code> to start the server.</li>
+<li>Checkout website on <code>localhost:1313</code>. (Also logged in output of above command).</li>
+<li>Make changes locally and it should be reflected in the webpage instantly! Isn&rsquo;t it awesome? though its pretty normal nowadays, but yeahh!</li>
+<li>Checkout <a href="https://jpanther.github.io/congo/docs/getting-started/" target="_blank" rel="noreferrer">congo guide</a> to know what each configuration does and how things are managed.</li>
+<li>All config files are in <em>config/_defaults</em> folder for you to tinker with.</li>
 </ul>
-<p>Now lets add index.html file in the right path (check root path in above configuration).</p>
+<p><strong>Approach 2: Using Hugo guide</strong></p>
 <ul>
-<li>Create the directory: <code>mkdir /var/www/your_domain.com</code></li>
-<li>Create new index.html: <code>vi /var/www/example.com/index.html</code></li>
-<li>Check your localhost, your <em>index.html</em> are now being shown.</li>
+<li>Follow the quick start guide to setup initial package: <a href="https://gohugo.io/getting-started/quick-start/" target="_blank" rel="noreferrer">https://gohugo.io/getting-started/quick-start/</a></li>
+<li>To use <code>congo</code> theme, follow <a href="https://jpanther.github.io/congo/docs/installation/" target="_blank" rel="noreferrer">https://jpanther.github.io/congo/docs/installation/</a>, it has easy setup guide, including what needs to be done on Hugo.</li>
 </ul>
-<h4 id="creating-certificates" class="relative group">Creating certificates <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#creating-certificates" aria-label="Anchor">#</a></span></h4><p>As I have hosted on cloudflare, I created certificates on cloudflare. You can either use your domain provider or use LetsEncrypt for creating self signed certificates.</p>
+<p>For other themes checkout <a href="https://themes.gohugo.io/" target="_blank" rel="noreferrer">Hugo Themes</a></p>
+<h3 id="syncing-the-updated-pages-to-your-server" class="relative group">Syncing the updated pages to your server. <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#syncing-the-updated-pages-to-your-server" aria-label="Anchor">#</a></span></h3><p>There are multiple way to do it. Lets see what I did, and then lets also discuss the alternatives.</p>
+<h4 id="what-i-did-for-syncing-website-to-server" class="relative group">What I did for syncing website to server <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#what-i-did-for-syncing-website-to-server" aria-label="Anchor">#</a></span></h4><ol>
+<li>Ran command <code>hugo</code> locally to generate static website in dev environment. (i.e. my machine).</li>
+<li>Used git to commit the public folder as well which contains the static generated website.</li>
+<li>Installed git on server using <code>sudo apt-get install git-all</code>. For other OS checkout <a href="https://github.com/git-guides/install-git" target="_blank" rel="noreferrer">https://github.com/git-guides/install-git</a></li>
+<li>Ran command <code>git clone &lt;my-repo-link&gt;.git</code> to clone the repo on the server.</li>
+<li>Copy the contents on <code>public</code> folder to the path where nginx is referring from, using <code>cp -r ./public/ /var/www/&lt;your folder&gt;/</code></li>
+<li>Restart nginx - <code>systemctl restart nginx</code>.</li>
+<li>Checkout your webpage and see the updated website.</li>
+</ol>
+<p><strong>FAQ</strong></p>
+<p><em>Q: Why did you not installed hugo locally on server and generated static website on server itself?</em></p>
 <ul>
-<li>Create folder for storing certificate and key <code>mkdir /etc/nginx/certs/&lt;your-domain.com&gt;</code></li>
+<li>I did this first but, it was causing issues to generate HTML files, due to some layout folder issue. I choose to do the above, to avoid spending time on debugging (I am lazy sometimes).</li>
 </ul>
-<p><strong>Using cloudflare</strong></p>
+<h4 id="other-options-on-upload-website-to-server-other-than-git" class="relative group">Other options on upload website to server (other than git) <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#other-options-on-upload-website-to-server-other-than-git" aria-label="Anchor">#</a></span></h4><p>These are other options to upload your website to your server but are not recommended as are not scalable.</p>
 <ol>
-<li>Open cloudflare 
-  
-  
-    
-<a href="dash.cloudflare.com">dashboard</a></li>
-<li>Click on your domain.</li>
-<li>Go to <em>SSL/TLS</em> &gt; <em>Client certificates</em>.</li>
-<li>Click on <em>Create Certificate</em></li>
-<li>Keep default values and click <em>Create</em> button.</li>
-<li>Copy the certificate and paste to file <code>vi /etc/nginx/certs/&lt;your-domain.com&gt;/certificate.pem</code></li>
-<li>Copy the private key and paste to file <code>vi /etc/nginx/certs/&lt;your-domain.com&gt;/key.pem</code></li>
-<li>Click <em>OK</em> on cloudlfare dashboard to go back to <em>Client Certificate</em>, you should be able to confirm on dashboard that a new Certificate is now being shown as <em>ACTIVE</em></li>
+<li>Create basic python server locally and host your folder which has the website. Use curl or Wget to download the folder on the server if you have local server.</li>
+<li>Use flash drive to transfer website..</li>
+<li>Use google drive and open the folder to public, and use its link to download on your server.</li>
 </ol>
-<p>Lets modify the configuration file to use these certificates.
-9. Open the configuration file <code>vi /etc/nginx/sites-enabled/&lt;your-domain.com&gt;</code>
-10. Update the configuration to look like this
-```
-server {
-listen 443 ssl http2;
-listen [::]:443 ssl http2;
-server_name  &lt;your-domain.com&gt;;
-ssl_certificate certs/&lt;your-domain.com&gt;/certificate.pem;
-ssl_certificate_key certs/&lt;your-domain.com&gt;/key.pem;</p>
-<pre><code>            ssl_protocols       TLSv1 TLSv1.1 TLSv1.2 TLSv1.3;
-            ssl_ciphers         HIGH:!aNULL:!MD5;
-
-            root /var/www/&lt;your-domain.com&gt;;
-            index index.html;
-
-            location / {
-                try_files $uri $uri/ =404;
-            }
-        }
-```
-</code></pre>
-<ol start="11">
-<li>Restart the nginx server <code>systemctl restart nginx</code></li>
-<li>Now your webpage will be up and running on https:://<server-ip></li>
+<p><strong>Recommended if you are using static website host providers like <em>AWS S3</em></strong></p>
+<ol>
+<li>If you are using <em>AWS S3</em> to host your static website, viola. Just upload your website and done.</li>
 </ol>
-<h2 id="resources" class="relative group">Resources: <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#resources" aria-label="Anchor">#</a></span></h2><p><a href="https://nginx.org/en/docs/beginners_guide.html" target="_blank" rel="noreferrer">https://nginx.org/en/docs/beginners_guide.html</a>
-<a href="https://utho.com/docs/tutorial/how-to-install-nginx-web-server-on-debian-12/" target="_blank" rel="noreferrer">https://utho.com/docs/tutorial/how-to-install-nginx-web-server-on-debian-12/</a>
-<a href="https://nginx.org/en/docs/http/configuring_https_servers.html" target="_blank" rel="noreferrer">https://nginx.org/en/docs/http/configuring_https_servers.html</a></p>
+<h4 id="automating-the-sync" class="relative group">Automating the sync <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#automating-the-sync" aria-label="Anchor">#</a></span></h4><p>I have not automated it yet, as I haven&rsquo;t got the time to do it but if you want to do it, here are the steps.</p>
+<ol>
+<li>Write a basic bash script to do: (psuedo code below)</li>
+</ol>
+<pre tabindex="0"><code>    `git fetch`: Fetches the new commit if there is one.
+
+    // Check if there are new commits to be pulled.
+    // Can be done by substring matching on `git fetch` output,
+    // or explore git to see if there are other alterative
+    If new commit: 
+        // Pull the commit
+        run `git pull --rebase`
+        // Copy the static website tonginx  server preferred location.
+        cp -r ./public/ /var/www/&lt;yourfolder&gt;/
+        // Restart server
+        systemctl restart nginx
+    Else:
+        Do nothing
+</code></pre><ol start="2">
+<li>Make the cron job from this bash script to run once a day or as per your need and you are good to go.</li>
+</ol>
+<p>I have not setup the script yet, as I prefer to do it manually as I am already running commands to push the changes to git. (I agree I am lazy&hellip;)</p>
+<h3 id="learnings-and-resources" class="relative group">Learnings and resources <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#learnings-and-resources" aria-label="Anchor">#</a></span></h3><ol>
+<li>
+<p>Powershell and Windows Powershell are different (Whaattt? - exactly my reaction)
+Install here - <a href="https://learn.microsoft.com/en-us/powershell/scripting/install/installing-powershell-on-windows?view=powershell-7.4" target="_blank" rel="noreferrer">https://learn.microsoft.com/en-us/powershell/scripting/install/installing-powershell-on-windows?view=powershell-7.4</a>
+Take - Powershell is way better than windows powershell.</p>
+</li>
+<li>
+<p>Installing hugo on windows: <a href="https://gohugo.io/installation/windows/" target="_blank" rel="noreferrer">https://gohugo.io/installation/windows/</a>
+I used chocolatey: <a href="https://gohugo.io/installation/windows/#chocolatey" target="_blank" rel="noreferrer">https://gohugo.io/installation/windows/#chocolatey</a></p>
+</li>
+<li>
+<p>Markdown is used throughout Hugo to create your website so here is the <a href="https://www.markdownguide.org/basic-syntax/" target="_blank" rel="noreferrer">basic syntax</a> on how to use it.</p>
+</li>
+<li>
+<p>Hugo generated static website does not work properly (HTML was not being generated) if you just open the file without the server.
+Solution: <a href="https://discourse.gohugo.io/t/site-looks-fine-on-localhost-and-github-pages-but-not-when-rendering-to-public/35825/2" target="_blank" rel="noreferrer">https://discourse.gohugo.io/t/site-looks-fine-on-localhost-and-github-pages-but-not-when-rendering-to-public/35825/2</a></p>
+<p>or just commit your public folder as well, just like I did.</p>
+</li>
+</ol>
+<p><em>I hope it helped, thanks for reading!</em></p>
 
       </div>
     </section>
@@ -727,10 +743,12 @@ ssl_certificate_key certs/&lt;your-domain.com&gt;/key.pem;</p>
       <div class="flex justify-between pt-3">
         <span>
           
-        </span>
-        <span>
-          
-            <a class="group flex text-right" href="/posts/this-website-setup/hosting/">
+            <a class="group flex" href="/posts/this-website-setup/hosting/">
+              <span
+                class="me-2 text-neutral-700 transition-transform group-hover:-translate-x-[2px] group-hover:text-primary-600 dark:text-neutral dark:group-hover:text-primary-400"
+                ><span class="ltr:inline rtl:hidden">&larr;</span
+                ><span class="ltr:hidden rtl:inline">&rarr;</span></span
+              >
               <span class="flex flex-col">
                 <span
                   class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
@@ -742,12 +760,10 @@ ssl_certificate_key certs/&lt;your-domain.com&gt;/key.pem;</p>
                   
                 </span>
               </span>
-              <span
-                class="ms-2 text-neutral-700 transition-transform group-hover:-translate-x-[2px] group-hover:text-primary-600 dark:text-neutral dark:group-hover:text-primary-400"
-                ><span class="ltr:inline rtl:hidden">&rarr;</span
-                ><span class="ltr:hidden rtl:inline">&larr;</span></span
-              >
             </a>
+          
+        </span>
+        <span>
           
         </span>
       </div>
