@@ -19,12 +19,11 @@ I am assuming you have already setup the cloudflare account with your domain.
 
 Lets create a cloudflared tunnel.
 
-References: 
-Creating tunnel: https://developers.cloudflare.com/cloudflare-one/connections/connect-networks/get-started/
-Creating tunnel using dashboard (managed-remotely): https://developers.cloudflare.com/cloudflare-one/connections/connect-networks/get-started/create-remote-tunnel/
+#### References: 
+- Creating tunnel: https://developers.cloudflare.com/cloudflare-one/connections/connect-networks/get-started/
+- Creating tunnel using dashboard (managed-remotely): https://developers.cloudflare.com/cloudflare-one/connections/connect-networks/get-started/create-remote-tunnel/
 
-
-> You should follow above guides as they are kept up to date by Cloudflare, mine can be old depending on when you checking it.
+You should follow above guides as they are kept up to date by Cloudflare, mine can be old depending on when you checking it.
 
 
 #### Steps to create a cloudflared tunnel:
