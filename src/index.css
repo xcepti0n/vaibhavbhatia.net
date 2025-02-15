@@ -21,5 +21,5 @@ ul {
     @apply list-disc pl-8;
 }
 a {
-    @apply text-primary hover:underline;
+    @apply text-primary;
 }

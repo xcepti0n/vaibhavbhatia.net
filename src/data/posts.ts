@@ -14,7 +14,7 @@ const blogPosts: { [key: string]:  BlogPost } = {
     content: React.createElement(NginxServerSetupBlogContent),
   },
   'cloudflare-tunnel-setup': {
-    title: 'Cloudflare Tunnel Setup for Secure Remote Access',
+    title: 'Host your website using Cloudflare tunnel',
     summary: 'Learn how to set up a secure tunnel using Cloudflare.',
     date: '2024-01-02',
     image: CloudflareCoverImage,
