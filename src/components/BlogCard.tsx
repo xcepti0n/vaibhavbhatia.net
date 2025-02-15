@@ -18,7 +18,7 @@ const BlogCard: React.FC<BlogCardProps> = ({ title, summary, image, link, date, 
         <img src={image} alt={title} className="w-full h-48 object-cover" />
         <div className="p-4">
           <h3 className="text-xl font-bold text-primary mb-2">{title}</h3>
-          <p className="text-secondary mb-2">By {author} On {date}</p>
+          <p className="text-secondary mb-2">By {author} on {date}</p>
           <p className="text-text mb-4">{summary}</p>
         </div>
       </div>

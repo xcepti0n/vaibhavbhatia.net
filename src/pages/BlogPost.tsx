@@ -1,17 +1,6 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
-import NginxServerSetupBlogContent from './blogs/NginxServerSetupBlogPost';
-import NginxCoverImage from '../assets/images/nginx_cover_black.png';
-import './blogs/blog.css';
-
-const blogPosts: { [key: string]: { title: string; content: React.ReactNode; date: string; author?: string | undefined; image: string } } = {
-  'nginx-server-setup': {
-    title: 'Nginx HTTPS Server Setup for Hosting Website',
-    content: <NginxServerSetupBlogContent />,
-    date: '2025-01-01',
-    image: NginxCoverImage,
-  }
-};
+import { blogPosts } from '../data/posts';
 
 const BlogPost: React.FC = () => {
   const { postId } = useParams<{ postId: string }>();

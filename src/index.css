@@ -11,3 +11,15 @@ h2 {
 h3 {
     @apply text-xl pt-4;
 }
+h4 {
+    @apply text-lg pt-4;
+}
+ol {
+    @apply list-decimal pl-8;
+}
+ul {
+    @apply list-disc pl-8;
+}
+a {
+    @apply text-primary hover:underline;
+}

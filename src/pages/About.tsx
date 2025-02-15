@@ -1,5 +1,5 @@
 import React from 'react';
-import AuthorImage from '../assets/author.jpg';
+import AuthorImage from '../assets/images/author_288x288_center.jpg';
 
 const About: React.FC = () => {
   return (

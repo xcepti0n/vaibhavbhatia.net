@@ -2,15 +2,24 @@ import React from 'react';
 import { BlogPost } from '../types';
 import NginxServerSetupBlogContent from '../pages/blogs/NginxServerSetupBlogPost';
 import NginxCoverImage from '../assets/images/nginx_cover_black.png';
+import CloudflareCoverImage from '../assets/images/cloudflare_cycle_cover.png';
+import CloudflareTunnelSetupBlogContent from '../pages/blogs/CloudflareTunnelSetupBlogPost';
 
 const blogPosts: { [key: string]:  BlogPost } = {
   'nginx-server-setup': {
     title: 'Nginx HTTPS Server Setup for Hosting Website',
     summary: 'An in-depth look at the nginx server setup for your first website.',
-    date: '2025-01-01',
+    date: '2024-01-02',
     image: NginxCoverImage,
     content: React.createElement(NginxServerSetupBlogContent),
   },
+  'cloudflare-tunnel-setup': {
+    title: 'Cloudflare Tunnel Setup for Secure Remote Access',
+    summary: 'Learn how to set up a secure tunnel using Cloudflare.',
+    date: '2024-01-02',
+    image: CloudflareCoverImage,
+    content: React.createElement(CloudflareTunnelSetupBlogContent),
+  }
 };
 
 const getLatestPosts = (posts: { [key: string]: BlogPost }, count: number) => {

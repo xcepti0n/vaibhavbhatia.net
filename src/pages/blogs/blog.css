@@ -1,9 +1,0 @@
-h1 {
-    @apply text-4xl pt-4;
-}
-h2 {
-    @apply text-2xl pt-4;
-}
-h3 {
-    @apply text-xl pt-4;
-}
