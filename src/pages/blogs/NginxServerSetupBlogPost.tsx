@@ -1,5 +1,6 @@
 import React from 'react';
 import CodeBlock from '../../components/CodeBlock';
+import './blog.css';
 
 const NginxServerSetupBlogContent: React.FC = () => {
   return (

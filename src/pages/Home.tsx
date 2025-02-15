@@ -3,6 +3,7 @@ import { ArrowRight } from 'lucide-react';
 import BlogCard from '../components/BlogCard';
 import { ProjectCard } from '../components/ProjectCard';
 import { latestBlogPosts } from '../data/posts';
+import { Link } from 'react-router-dom';
 
 type FeaturedProjects = { title: string; summary: string; image: string; link: string };
 
@@ -23,14 +24,13 @@ const Home: React.FC = () => {
   return (
     <div className=" bg-background text-text min-h-screen">
       <div className="bg-gradient-to-r from-primary to-secondary text-white text-center py-20">
-        <h1 className="text-4xl font-bold mb-4">Welcome to My Portfolio</h1>
+        <h1 className="text-4xl font-bold mb-4">Welcome to My Space</h1>
         <p className="text-lg mb-8">Discover my projects, read my blog, and learn more about me.</p>
-        <a 
-          href="/portfolio" 
-          className="bg-white text-primary px-6 py-2 rounded-full font-bold inline-flex items-center transition duration-300 ease-in-out transform hover:bg-primary hover:text-white hover:shadow-lg hover:scale-105"
-        >
-          View Portfolio <ArrowRight className="ml-2" />
-        </a>
+        <Link to="/about">
+        <div className="bg-white text-primary px-6 py-2 rounded-full font-bold inline-flex items-center transition duration-300 ease-in-out transform hover:bg-primary hover:text-white hover:shadow-lg hover:scale-105">
+          About <ArrowRight className="ml-2" />
+          </div>
+        </Link>
       </div>
       
       <div className={` mx-auto p-4 ${featuredProjects.length > 0 ? 'container': 'hidden'}`}>
@@ -51,7 +51,7 @@ const Home: React.FC = () => {
       </div>
 
       <div className={` mx-auto p-4 ${latestBlogPosts.length > 0 ? 'container': 'hidden'}`}>
-        <h2 className="text-3xl font-bold mb-4 text-primary text-center">Latest Blog Posts</h2>
+        <h1 className="mb-4 text-primary text-center">Latest Blog Posts</h1>
         <div className="relative">
           <div className="flex flex-wrap gap-6" ref={blogRef}>
             {latestBlogPosts.map(post => (

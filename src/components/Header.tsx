@@ -17,7 +17,7 @@ const Header: React.FC = () => {
   return (
     <header className="bg-primary text-white p-4 sticky top-0 z-50">
       <div className="container mx-auto flex justify-between items-center">
-        <div className="text-2xl font-bold">
+        <div className="text-3xl font-bold">
           <Link to="/" className="hover:text-secondary transition-colors duration-200">
             Home
           </Link>

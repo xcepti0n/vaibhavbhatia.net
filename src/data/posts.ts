@@ -24,6 +24,16 @@ const getLatestPosts = (posts: { [key: string]: BlogPost }, count: number) => {
   return postsArray.slice(0, count);
 }
 
+const getFilteredPosts = (posts: { [key: string]: BlogPost }, searchTerm: string) => {
+  // Convert the object to an array
+  const postsArray = Object.entries(posts).map(([key, post]) => ({ ...post, key }));
+
+  // Filter the array based on the search term
+  return postsArray.filter(post =>
+    post.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+    post.summary.toLowerCase().includes(searchTerm.toLowerCase())
+  );
+}
 const latestBlogPosts = getLatestPosts(blogPosts, 3);
 
-export  {blogPosts, latestBlogPosts};
+export  {blogPosts, latestBlogPosts, getFilteredPosts};

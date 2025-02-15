@@ -2,7 +2,7 @@ import React from 'react';
 import { useParams } from 'react-router-dom';
 import NginxServerSetupBlogContent from './blogs/NginxServerSetupBlogPost';
 import NginxCoverImage from '../assets/images/nginx_cover_black.png';
-import './blogs/blog.css'
+import './blogs/blog.css';
 
 const blogPosts: { [key: string]: { title: string; content: React.ReactNode; date: string; author?: string | undefined; image: string } } = {
   'nginx-server-setup': {

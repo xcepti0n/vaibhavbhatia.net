@@ -12,18 +12,5 @@ export default {
       },
     },
   },
-  plugins: [
-    function ({ addUtilities }) {
-      addUtilities({
-        'code': {
-          backgroundColor: '#f5f5f5',
-          border: '1px solid #ccc',
-          padding: '2px 4px',
-          borderRadius: '4px',
-          fontFamily: 'monospace',
-          fontSize: '0.875rem', // Tailwind's text-sm
-        }
-      }, ['responsive', 'hover']);
-    },
-  ],
+  plugins: [],
 };
