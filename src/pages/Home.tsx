@@ -51,7 +51,7 @@ const Home: React.FC = () => {
       </div>
 
       <div className={` mx-auto p-4 ${latestBlogPosts.length > 0 ? 'container': 'hidden'}`}>
-        <h1 className="mb-4 text-primary text-center">Latest Blog Posts</h1>
+        <h1 className="mb-4 text-primary text-center p-4">Latest Blog Posts</h1>
         <div className="relative">
           <div className="flex flex-wrap gap-6" ref={blogRef}>
             {latestBlogPosts.map(post => (

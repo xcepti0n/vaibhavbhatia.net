@@ -6,7 +6,7 @@ const NavItem: React.FC<{ to: string; label: string }> = ({ to, label }) => (
   <li className='transform hover:scale-105 ease-in-out duration-200'>
     <Link
       to={to}
-      className="bg-primary px-4 py-2 rounded-lg font-bold text-white hover:bg-white hover:text-primary  duration-200 shadow-md text-xl"
+      className="bg-primary px-4 py-2 rounded-lg font-bold text-white hover:bg-white hover:text-primary  duration-200 text-xl"
     >
       {label}
     </Link>
