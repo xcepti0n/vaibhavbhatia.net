@@ -4,7 +4,6 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import Home from './pages/Home';
 import Blog from './pages/Blog';
-import Portfolio from './pages/Portfolio';
 import About from './pages/About';
 import BlogPost from './pages/BlogPost';
 
@@ -17,7 +16,6 @@ const App: React.FC = () => {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/blog" element={<Blog />} />
-            <Route path="/portfolio" element={<Portfolio />} />
             <Route path="/about" element={<About />} />
             <Route path="/blog/:postId" element={<BlogPost />} />
           </Routes>

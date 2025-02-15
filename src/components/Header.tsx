@@ -25,7 +25,6 @@ const Header: React.FC = () => {
         <nav>
           <ul className="flex gap-4">
             <NavItem to="/blog" label="Blog" />
-            <NavItem to="/portfolio" label="Portfolio" />
             <NavItem to="/about" label="About" />
           </ul>
         </nav>

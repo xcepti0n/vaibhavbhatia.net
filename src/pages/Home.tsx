@@ -2,44 +2,18 @@ import React, { useRef } from 'react';
 import { ArrowRight } from 'lucide-react';
 import BlogCard from '../components/BlogCard';
 import { ProjectCard } from '../components/ProjectCard';
+import { latestBlogPosts } from '../data/posts';
 
 type FeaturedProjects = { title: string; summary: string; image: string; link: string };
 
 const featuredProjects : FeaturedProjects[] = [
-  {
-    title: 'AI-Powered Chatbot',
-    summary: 'A chatbot that uses AI to understand and respond to user queries.',
-    image: 'https://via.placeholder.com/150',
-    link: '/portfolio/ai-chatbot',
-  },
-  {
-    title: 'Quantum Computing Simulator',
-    summary: 'A simulator for understanding quantum computing principles.',
-    image: 'https://via.placeholder.com/150',
-    link: '/portfolio/quantum-simulator',
-  },
+  // {
+  //   title: 'AI-Powered Chatbot',
+  //   summary: 'A chatbot that uses AI to understand and respond to user queries.',
+  //   image: 'https://via.placeholder.com/150',
+  //   link: '/portfolio/ai-chatbot',
+  // },
   // Add more projects here...
-];
-
-type FeaturedBlogPosts = { title: string; summary: string; image: string; link: string; date: string; author?: string };
-const featuredBlogPosts: FeaturedBlogPosts[] = [
-  {
-    title: 'Exploring the Future of AI',
-    summary: 'An in-depth look at the latest advancements in artificial intelligence.',
-    image: 'https://via.placeholder.com/150',
-    link: '/blog/ai-future',
-    date: '2025-01-01',
-    author: 'John Doe',
-  },
-  {
-    title: 'The Rise of Quantum Computing',
-    summary: 'A summary of the rise and potential of quantum computing.',
-    image: 'https://via.placeholder.com/150',
-    link: '/blog/quantum-computing',
-    date: '2025-02-01',
-    author: 'Jane Smith',
-  },
-  // Add more blog posts here...
 ];
 
 const Home: React.FC = () => {
@@ -76,17 +50,17 @@ const Home: React.FC = () => {
         </div>
       </div>
 
-      <div className={` mx-auto p-4 ${featuredBlogPosts.length > 0 ? 'container': 'hidden'}`}>
-        <h2 className="text-3xl font-bold mb-4 text-primary text-center">Featured Blog Posts</h2>
+      <div className={` mx-auto p-4 ${latestBlogPosts.length > 0 ? 'container': 'hidden'}`}>
+        <h2 className="text-3xl font-bold mb-4 text-primary text-center">Latest Blog Posts</h2>
         <div className="relative">
           <div className="flex flex-wrap gap-6" ref={blogRef}>
-            {featuredBlogPosts.map((post, index) => (
+            {latestBlogPosts.map(post => (
               <BlogCard 
-                key={index}
+                key={post.key}
                 title={post.title}
                 summary={post.summary}
                 image={post.image}
-                link={post.link}
+                link={post.key}
                 date={post.date}
                 author={post.author === undefined ? 'Vaibhav Bhatia': post.author}
               />

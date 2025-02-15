@@ -1,9 +1,18 @@
-export interface BlogPost {
-  id: string;
+// export interface BlogPost {
+//   id: string;
+//   title: string;
+//   excerpt: string;
+//   content: string;
+//   date: string;
+//   imageUrl: string;
+//   readTime: number;
+// }
+
+export type BlogPost = {
   title: string;
-  excerpt: string;
-  content: string;
+  summary: string;
+  content: React.ReactNode;
   date: string;
-  imageUrl: string;
-  readTime: number;
+  author?: string | undefined;
+  image: string
 }
