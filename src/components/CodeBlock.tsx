@@ -17,7 +17,7 @@ const CodeBlock: React.FC<CodeBlockProps> = ({ children }) => {
   };
 
   return (
-    <div className="relative bg-gray-800 text-white p-4 rounded font-mono">
+    <div className="relative bg-gray-600 text-white p-4 rounded font-mono">
         {children}
       <button
         onClick={handleCopy}
