@@ -180,7 +180,7 @@ const LocalLLMBenchBlogContent: React.FC = () => {
             <td>~13 GB</td>
           </tr>
           <tr>
-            <td><code>Huihui / coding nvfp4</code> (~13.7 GB)</td>
+            <td><code>Huihui/Qwen3.6-27B nvfp4</code> (~13.7 GB)</td>
             <td>~16 GB</td>
             <td>~18 GB</td>
             <td>~22 GB</td>
@@ -325,6 +325,73 @@ const LocalLLMBenchBlogContent: React.FC = () => {
         Results land in <code>results/&lt;model_slug&gt;/</code> as both a human-readable <code>.md</code>{' '}
         report and a raw <code>benchmark_results.jsonl</code> file. Run{' '}
         <code>python3 update_readme.py</code> to regenerate the run history table in the README.
+      </p>
+
+      <h2>Run History</h2>
+      <p>
+        Aggregate scores across all benchmark runs. Tool correct % is calculated against the total number of
+        tool call opportunities in that run set.
+      </p>
+      <table>
+        <thead>
+          <tr>
+            <th>Model</th>
+            <th>Configs tested</th>
+            <th>Avg Q tok/s</th>
+            <th>Avg TC tok/s</th>
+            <th>Tool correct</th>
+            <th>Avg quality</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>gemma4:26b</code></td>
+            <td>407</td>
+            <td>38.84</td>
+            <td>39.60</td>
+            <td>407 / 418 (97%)</td>
+            <td>2.1 / 3</td>
+          </tr>
+          <tr>
+            <td><code>gemma4:e4b</code></td>
+            <td>485</td>
+            <td>37.45</td>
+            <td>39.21</td>
+            <td>443 / 490 (90%)</td>
+            <td>2.3 / 3</td>
+          </tr>
+          <tr>
+            <td><code>qwen3.5:9b</code></td>
+            <td>389</td>
+            <td>21.16</td>
+            <td>21.70</td>
+            <td>208 / 399 (52%)</td>
+            <td>1.6 / 3</td>
+          </tr>
+          <tr>
+            <td><code>Huihui/Qwen3.6-27B nvfp4</code></td>
+            <td>293</td>
+            <td>13.86</td>
+            <td>13.81</td>
+            <td>186 / 299 (62%)</td>
+            <td>3.0 / 3</td>
+          </tr>
+          <tr>
+            <td><code>qwen3.6:27b-coding-nvfp4</code> *</td>
+            <td>6</td>
+            <td>13.34</td>
+            <td>13.35</td>
+            <td>6 / 6 (100%)</td>
+            <td>3.0 / 3</td>
+          </tr>
+        </tbody>
+      </table>
+      <p>
+        Q tok/s = query (prompt evaluation) tokens per second. TC tok/s = tool call tokens per second.
+        Quality is manually scored 0-3 per run on response coherence and instruction following.
+      </p>
+      <p>
+        * Preliminary run only (6 configs). Scores are directionally useful but not statistically meaningful.
       </p>
 
       <h2>Takeaways</h2>
