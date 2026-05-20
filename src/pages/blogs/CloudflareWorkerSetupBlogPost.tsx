@@ -69,37 +69,29 @@ not_found_handling = "single-page-application"`}
         </li>
       </ul>
 
-      <h2>Step 3: Add deploy scripts to package.json</h2>
+      <h2>Step 3: Add a local preview script to package.json</h2>
+      <p>
+        Optionally add a <code>cf:preview</code> script to test the Worker locally before pushing:
+      </p>
       <CodeBlock>
         {`{
   "scripts": {
     "build": "vite build",
-    "deploy": "vite build && wrangler deploy",
     "cf:preview": "vite build && wrangler dev"
   }
 }`}
       </CodeBlock>
       <p>
-        <code>npm run deploy</code> builds the site and deploys it in one step.{' '}
-        <code>npm run cf:preview</code> lets you test the Worker locally before pushing.
+        <code>npm run cf:preview</code> runs your built assets through a local Worker runtime, including
+        the SPA fallback behavior, so you can verify routing works before pushing.
       </p>
 
       <h2>Step 4: Connect GitHub to Cloudflare</h2>
       <p>
-        The easiest way to deploy is through the Cloudflare dashboard's git integration. No local{' '}
-        <code>wrangler login</code> needed. Cloudflare's build environment handles authentication
-        automatically using your account credentials.
-      </p>
-      <p>
         In the Cloudflare dashboard, go to <strong>Workers &amp; Pages</strong>, click{' '}
         <strong>Create</strong>, and choose <strong>Connect to Git</strong>. Authorize Cloudflare to access
         your GitHub repo, then set the build configuration (see below). Every push to your main branch
-        triggers a new deploy automatically.
-      </p>
-      <p>
-        If you prefer deploying manually from the CLI instead, you can run <code>npx wrangler login</code>{' '}
-        to authenticate locally, then <code>npm run deploy</code>. But with git integration set up, you
-        rarely need to do this.
+        triggers a new deploy automatically. No local authentication needed.
       </p>
 
       <h2>Connecting a Custom Domain</h2>
@@ -143,14 +135,6 @@ not_found_handling = "single-page-application"`}
         which Worker to target and where the built assets are.
       </p>
 
-      <h2>Local Preview</h2>
-      <p>To test locally before deploying:</p>
-      <CodeBlock>npm run cf:preview</CodeBlock>
-      <p>
-        This runs <code>wrangler dev</code> which serves your built assets locally through a local Worker
-        runtime, including the SPA fallback behavior, so you can verify routing works before pushing.
-      </p>
-
       <h2>Troubleshooting</h2>
       <h3>Client-side routes return 404</h3>
       <p>
@@ -172,20 +156,20 @@ not_found_handling = "single-page-application"`}
       </p>
 
       <h2>Summary</h2>
-      <p>The full setup is two files and one dashboard action:</p>
+      <p>The full setup is one package, one config file, and one dashboard connection:</p>
       <CodeBlock>
         {`# 1. Install Wrangler
 npm install --save-dev wrangler
 
-# 2. Create wrangler.toml (see above)
+# 2. Create wrangler.toml at repo root (see above)
 
-# 3. Connect GitHub repo in Cloudflare dashboard
+# 3. In Cloudflare dashboard: Workers & Pages > Create > Connect to Git
 #    Build command:  npm run build
 #    Deploy command: npx wrangler deploy
 #    Root directory: /`}
       </CodeBlock>
       <p>
-        That's it. Push to main and Cloudflare builds and deploys automatically. No separate CI pipeline,
+        Push to main and Cloudflare builds and deploys automatically. No separate CI pipeline,
         no local authentication, no infrastructure to manage.
       </p>
     </div>

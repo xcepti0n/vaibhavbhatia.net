@@ -8,7 +8,6 @@
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "deploy": "vite build && wrangler deploy",
     "cf:preview": "vite build && wrangler dev"
   },
   "dependencies": {
