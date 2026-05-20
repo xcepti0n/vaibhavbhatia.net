@@ -6,8 +6,17 @@ import CloudflareCoverImage from '../assets/images/cloudflare_cycle_cover.png';
 import CloudflareTunnelSetupBlogContent from '../pages/blogs/CloudflareTunnelSetupBlogPost';
 import LocalLLMBenchBlogContent from '../pages/blogs/LocalLLMBenchBlogPost';
 import LocalLLMBenchCoverImage from '../assets/images/local_llm_bench_cover.png';
+import CloudflareWorkerSetupBlogContent from '../pages/blogs/CloudflareWorkerSetupBlogPost';
+import CloudflareWorkerCoverImage from '../assets/images/cloudflare_worker_cover.png';
 
 const blogPosts: { [key: string]:  BlogPost } = {
+  'cloudflare-worker-setup': {
+    title: 'Deploying a Static Site as a Cloudflare Worker',
+    summary: 'Step-by-step guide to deploying a Vite/React app as a Cloudflare Worker using Wrangler — including SPA routing, custom domains, and git-based auto-deploys.',
+    date: '2026-05-20',
+    image: CloudflareWorkerCoverImage,
+    content: React.createElement(CloudflareWorkerSetupBlogContent),
+  },
   'local-llm-bench': {
     title: 'Benchmarking Local LLMs on Apple Silicon for Agent Workloads',
     summary: 'Parameter sweep results across 5 Ollama models on M1 Max 32 GB — speed, tool-call accuracy, and which think mode settings actually help.',
