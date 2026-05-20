@@ -4,8 +4,17 @@ import NginxServerSetupBlogContent from '../pages/blogs/NginxServerSetupBlogPost
 import NginxCoverImage from '../assets/images/nginx_cover_black.png';
 import CloudflareCoverImage from '../assets/images/cloudflare_cycle_cover.png';
 import CloudflareTunnelSetupBlogContent from '../pages/blogs/CloudflareTunnelSetupBlogPost';
+import LocalLLMBenchBlogContent from '../pages/blogs/LocalLLMBenchBlogPost';
+import LocalLLMBenchCoverImage from '../assets/images/local_llm_bench_cover.png';
 
 const blogPosts: { [key: string]:  BlogPost } = {
+  'local-llm-bench': {
+    title: 'Benchmarking Local LLMs on Apple Silicon for Agent Workloads',
+    summary: 'Parameter sweep results across 5 Ollama models on M1 Max 32 GB — speed, tool-call accuracy, and which think mode settings actually help.',
+    date: '2026-05-19',
+    image: LocalLLMBenchCoverImage,
+    content: React.createElement(LocalLLMBenchBlogContent),
+  },
   'nginx-server-setup': {
     title: 'Nginx HTTPS Server Setup for Hosting Website',
     summary: 'An in-depth look at the nginx server setup for your first website.',

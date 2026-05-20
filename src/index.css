@@ -23,3 +23,15 @@ ul {
 a {
     @apply text-primary;
 }
+table {
+    @apply w-full border-collapse my-4 text-sm;
+}
+th {
+    @apply bg-gray-100 text-left font-semibold px-4 py-2 border border-gray-300;
+}
+td {
+    @apply px-4 py-2 border border-gray-300 align-top;
+}
+tr:nth-child(even) td {
+    @apply bg-gray-50;
+}
