@@ -1,37 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@300;400;500;600&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-h1 {
-    @apply text-4xl pt-4;
+/* ── Base ── */
+html {
+  scroll-behavior: smooth;
 }
-h2 {
-    @apply text-2xl pt-4;
+
+body {
+  background-color: #0D0D1A;
+  color: #E2E8F0;
+  font-family: 'DM Sans', system-ui, sans-serif;
+  min-height: 100vh;
+  /* Subtle noise grain overlay */
+  background-image:
+    url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+  background-size: 200px 200px;
 }
-h3 {
-    @apply text-xl pt-4;
+
+/* ── Glass utility ── */
+@layer components {
+  .glass {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+  }
+  .glass-hover {
+    transition: background 0.2s, border-color 0.2s, box-shadow 0.2s;
+  }
+  .glass-hover:hover {
+    background: rgba(255, 255, 255, 0.09);
+    border-color: rgba(129, 140, 248, 0.35);
+    box-shadow: 0 0 24px rgba(129, 140, 248, 0.15);
+  }
 }
-h4 {
-    @apply text-lg pt-4;
+
+/* ── Typography ── */
+h1, h2, h3, h4 {
+  font-family: 'DM Serif Display', Georgia, serif;
+  color: #F1F5F9;
 }
-ol {
-    @apply list-decimal pl-8;
-}
-ul {
-    @apply list-disc pl-8;
-}
+h1 { @apply text-4xl pt-4; }
+h2 { @apply text-2xl pt-4; }
+h3 { @apply text-xl pt-4; }
+h4 { @apply text-lg pt-4; }
+
+ol  { @apply list-decimal pl-8 my-3; }
+ul  { @apply list-disc pl-8 my-3; }
+p   { @apply leading-relaxed my-2; }
+
 a {
-    @apply text-primary;
+  color: #2DD4BF;
+  transition: color 0.2s;
 }
+a:hover {
+  color: #818CF8;
+}
+
+/* ── Prose inside blog posts ── */
+.prose p, .prose li, .prose td {
+  color: #CBD5E1;
+}
+.prose h1, .prose h2, .prose h3, .prose h4 {
+  color: #F1F5F9;
+}
+.prose strong {
+  color: #F1F5F9;
+}
+.prose em {
+  color: #94A3B8;
+}
+
+/* ── Tables ── */
 table {
-    @apply w-full border-collapse my-4 text-sm;
+  @apply w-full border-collapse my-6 text-sm;
 }
 th {
-    @apply bg-gray-100 text-left font-semibold px-4 py-2 border border-gray-300;
+  background: rgba(129, 140, 248, 0.15);
+  color: #E2E8F0;
+  @apply text-left font-semibold px-4 py-3;
+  border: 1px solid rgba(255, 255, 255, 0.08);
 }
 td {
-    @apply px-4 py-2 border border-gray-300 align-top;
+  @apply px-4 py-3 align-top;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  color: #CBD5E1;
 }
 tr:nth-child(even) td {
-    @apply bg-gray-50;
+  background: rgba(255, 255, 255, 0.03);
+}
+
+/* ── Misc ── */
+blockquote {
+  border-left: 3px solid #2DD4BF;
+  @apply pl-4 italic my-4;
+  color: #94A3B8;
+}
+
+code {
+  background: rgba(129, 140, 248, 0.15);
+  color: #a5b4fc;
+  @apply px-1.5 py-0.5 rounded text-sm font-mono;
 }
